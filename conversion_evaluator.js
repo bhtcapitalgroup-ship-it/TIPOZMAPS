@@ -7,9 +7,10 @@
  *
  * Feasibility threshold:
  *   200 units × 500 sq ft + common areas = 120,000 sq ft minimum
- *   Property use must be "Office" (best candidate for resi conversion)
+ *   Property use must be "Office" (DOR prefix 17xx)
  *
- * Mocks physical attributes until a county appraiser API is wired in.
+ * Now reads real physicalAttributes attached by miami_public_data.js
+ * during the Phase 3 enrichment pipeline.
  */
 
 const fs = require("fs");
@@ -22,37 +23,6 @@ const MIN_SQFT = 120000;
 const TARGET_UNITS = 200;
 const AVG_UNIT_SQFT = 500;
 const REQUIRED_USE = "Office";
-
-const PROPERTY_USES = ["Office", "Retail", "Industrial"];
-
-// ---------------------------------------------------------------------------
-// Mock physical attribute enrichment
-// ---------------------------------------------------------------------------
-
-/**
- * Simulates a county appraiser lookup. Uses a fixed lookup table keyed
- * by property ID so results are deterministic and demonstrate all three
- * filter outcomes: pass, fail-on-use, and fail-on-size.
- *
- * In production this would call the Miami-Dade Property Appraiser API.
- */
-const MOCK_PHYSICAL_DATA = {
-  1: { propertyUse: "Office",     buildingSqFt: 135000 }, // Office + big enough => UNICORN
-  2: { propertyUse: "Retail",     buildingSqFt: 142000 }, // Big enough but wrong use => FAIL
-  4: { propertyUse: "Office",     buildingSqFt: 78000 },  // Office but too small => FAIL
-};
-
-function enrichPhysicalAttributes(property) {
-  const mock = MOCK_PHYSICAL_DATA[property.id] || {
-    propertyUse: PROPERTY_USES[property.id % PROPERTY_USES.length],
-    buildingSqFt: Math.round(10000 + (((property.id * 374761393) >>> 0) / 4294967296) * 140000),
-  };
-
-  return {
-    ...property,
-    physicalAttributes: mock,
-  };
-}
 
 // ---------------------------------------------------------------------------
 // Conversion feasibility check
@@ -70,7 +40,7 @@ function evaluateConversion(property) {
     : 0;
 
   const reasons = [];
-  if (!isOffice) reasons.push(`Use is "${propertyUse}", not Office`);
+  if (!isOffice) reasons.push(`Use is "${propertyUse}" (${property.physicalAttributes.propertyUseRaw || "N/A"}), not Office`);
   if (!meetsSize) reasons.push(`${buildingSqFt.toLocaleString()} sq ft < ${MIN_SQFT.toLocaleString()} sq ft minimum`);
 
   return {
@@ -78,6 +48,7 @@ function evaluateConversion(property) {
     conversionAnalysis: {
       feasible,
       propertyUse,
+      propertyUseRaw: property.physicalAttributes.propertyUseRaw || null,
       buildingSqFt,
       minRequired: MIN_SQFT,
       potentialUnits,
@@ -97,17 +68,14 @@ function main() {
   console.log("=== TIPOZMAPS — Phase 4: Office-to-Resi Conversion Filter ===\n");
   console.log(`Feasibility threshold: ${MIN_SQFT.toLocaleString()} sq ft (${TARGET_UNITS} units × ${AVG_UNIT_SQFT} sq ft + common areas)\n`);
 
-  // 1. Load targets
+  // 1. Load targets (already enriched with real county data from Phase 3)
   const targets = JSON.parse(fs.readFileSync(INPUT_PATH, "utf-8"));
   console.log(`Loaded ${targets.length} highly motivated seller properties.\n`);
 
-  // 2. Enrich with physical attributes
-  const enriched = targets.map(enrichPhysicalAttributes);
+  // 2. Evaluate each (physicalAttributes already attached by miami_public_data.js)
+  const evaluated = targets.map(evaluateConversion);
 
-  // 3. Evaluate each
-  const evaluated = enriched.map(evaluateConversion);
-
-  // 4. Print evaluation
+  // 3. Print evaluation
   console.log("--- CONVERSION FEASIBILITY ---\n");
   for (const p of evaluated) {
     const ca = p.conversionAnalysis;
@@ -115,7 +83,7 @@ function main() {
 
     console.log(`[${p.id}] ${p.address}`);
     console.log(`     Distress Score: ${p.distressScore}/6  |  Zones: ${p.insideCRA ? "CRA" : ""}${p.insideCRA && p.insideOZ ? " + " : ""}${p.insideOZ ? "OZ" : ""}`);
-    console.log(`     Use: ${ca.propertyUse}  |  Size: ${ca.buildingSqFt.toLocaleString()} sq ft`);
+    console.log(`     Use: ${ca.propertyUse} (${ca.propertyUseRaw || "N/A"})  |  Size: ${ca.buildingSqFt.toLocaleString()} sq ft`);
     console.log(`     [${icon}] ${ca.reasons.join("; ")}`);
     if (ca.feasible) {
       console.log(`     => Potential: ~${ca.potentialUnits} units (target: ${TARGET_UNITS})`);
@@ -123,7 +91,7 @@ function main() {
     console.log();
   }
 
-  // 5. Filter unicorns and save
+  // 4. Filter unicorns and save
   const unicorns = evaluated.filter((p) => p.conversionAnalysis.feasible);
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(unicorns, null, 2), "utf-8");
