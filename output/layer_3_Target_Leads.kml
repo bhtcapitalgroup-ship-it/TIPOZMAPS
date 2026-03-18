@@ -1,0 +1,5543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Layer 3 — Target Acquisition Leads</name>
+  <Style id="pinHigh">
+    <IconStyle>
+      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon>
+      <scale>1.1</scale>
+    </IconStyle>
+  </Style>
+  <Style id="pinMed">
+    <IconStyle>
+      <Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon>
+      <scale>1.1</scale>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>2900 NE 2 AVE</name>
+    <description>Building: 1,939,983 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PPF AMLI NE 2ND AVENUE LLC (IL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.191562,25.805062,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>710 NE 1 AVE</name>
+    <description>Building: 907,687 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: MWT 1 LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.192456,25.781759,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3101 NE 1 AVE</name>
+    <description>Building: 869,370 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MIAMI MIDTOWN VI OWNER LLC (IL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Midtown Miami
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.192309,25.806319,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19501 BISCAYNE BLVD</name>
+    <description>Building: 864,130 sq ft
+Type: DEPARTMENT STORE
+Owner: AVENTURA MALL VENTURE (OH)
+Tax: Delinquent ($19,550)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.140522,25.954565,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>698 NE 1 AVE</name>
+    <description>Building: 845,870 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: BLOCK G PHASE 1, LLC (CA)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.192924,25.780769,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6600 SW 57 AVE</name>
+    <description>Building: 759,863 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SCG ATLAS RED ROAD COMMONS LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 76.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.286264,25.709293,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1756 N BAYSHORE DR</name>
+    <description>Building: 737,810 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: BAY PARC PLAZA APT LP (TX)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.187262,25.792879,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>125 NE 32 ST</name>
+    <description>Building: 701,056 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SE MIDTOWN 5 LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: CRA: Midtown Miami
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.192193,25.806792,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2000 BISCAYNE BLVD</name>
+    <description>Building: 695,868 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 2000 BISCAYNE FEE OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: Omni + OZ: 27.02
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.189565,25.795545,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>400 NW 1 AVE</name>
+    <description>Building: 655,148 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL SOUTH LLC (VA)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195738,25.777851,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>400 NW 1 AVE</name>
+    <description>Building: 655,148 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL SOUTH LLC (VA)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.19603,25.778111,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>400 NW 1 AVE</name>
+    <description>Building: 655,148 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL SOUTH LLC (VA)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195766,25.778283,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>400 NW 1 AVE</name>
+    <description>Building: 655,148 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL SOUTH LLC (VA)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195834,25.778639,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>400 NW 1 AVE</name>
+    <description>Building: 655,148 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL SOUTH LLC (VA)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195725,25.778707,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1633 N BAYSHORE DR</name>
+    <description>Building: 643,107 sq ft
+Type: HOTEL OR MOTEL
+Owner: BISCAYNE BAY LAND EAT LLC (AZ)
+Tax: Delinquent ($9,050)
+Zones: CRA: Omni
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.186623,25.790812,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7200 W 4 AVE</name>
+    <description>Building: 614,708 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: FLORIDA KENNELS INC (IL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 93.08
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.293622,25.889424,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>100 NW 6 ST</name>
+    <description>Building: 602,884 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL NORTH LLC (VA)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195922,25.779039,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>100 NW 6 ST</name>
+    <description>Building: 602,884 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL NORTH LLC (VA)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195779,25.779051,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>100 NW 6 ST</name>
+    <description>Building: 602,884 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL NORTH LLC (VA)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195961,25.779239,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>100 NW 6 ST</name>
+    <description>Building: 602,884 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DT RESIDENTIAL NORTH LLC (VA)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195878,25.779483,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20900 BISCAYNE BLVD</name>
+    <description>Building: 600,923 sq ft
+Type: HOSPITAL - PRIVATE
+Owner: MIAMI BEACH HEALTHCARE GROUP LTD (TN)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.145603,25.969349,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19501 BISCAYNE BLVD 1455</name>
+    <description>Building: 593,596 sq ft
+Type: DEPARTMENT STORE
+Owner: AVENTURA MALL VENTURE (OH)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.141527,25.95754,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>711 NW 72 AVE</name>
+    <description>Building: 570,000 sq ft
+Type: HOTEL OR MOTEL
+Owner: AFP 103 CORP (NY)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.310101,25.778585,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7100 NW 32 AVE</name>
+    <description>Building: 565,771 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: BURDINES REAL ESTATE II INC (OH)
+Tax: Delinquent ($19,550)
+Zones: CRA: NW 79th Street + OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.250758,25.839445,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>180 NE 29 ST</name>
+    <description>Building: 545,562 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PPF AMLI 180 NE 29TH STREET LLC (IL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 27.02
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.191838,25.803628,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>150 W FLAGLER ST</name>
+    <description>Building: 545,044 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: BOF FL MUSEUM TOWER LLC (UT)
+Tax: Delinquent ($8,000)
+Zones: OZ: 36.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197134,25.773557,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>21201 NW 43 AVE</name>
+    <description>Building: 536,184 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MG EAST LLC (IL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens + OZ: 100.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.272709,25.966465,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>218 NW 8 ST</name>
+    <description>Building: 516,808 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: AVANTI RESIDENTIAL ARTE (CO)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.19915,25.781387,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>9200 NW 11 AVE</name>
+    <description>Building: 504,970 sq ft
+Type: HOSPITAL - PRIVATE
+Owner: MPT OF MIAMI EXCHANGE LLC (AL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 10.05
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.214507,25.859475,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7000 NW 32 AVE</name>
+    <description>Building: 484,824 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: CENTERPOINT PROPERTIES TRUST (IL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.251638,25.837234,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 443,631 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: B9 3MC OWNER LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197029,25.780118,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 443,631 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: B9 3MC OWNER LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197024,25.780126,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 443,631 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: B9 3MC OWNER LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.19723,25.780443,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 443,631 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: B9 3MC OWNER LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197797,25.780595,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 443,631 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: B9 3MC OWNER LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197781,25.780612,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 443,631 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: B9 3MC OWNER LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197781,25.78063,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2377 COLLINS AVE</name>
+    <description>Building: 433,336 sq ft
+Type: HOTEL OR MOTEL
+Owner: SB HOTEL OWNER LP (CT)
+Tax: Delinquent ($9,050)
+Zones: CRA: Miami Beach City Center
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.126495,25.799024,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19279 NW 27 AVE</name>
+    <description>Building: 420,332 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: NEW POMELO LLC (IN)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.243337,25.950236,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5405 NW 159 ST</name>
+    <description>Building: 409,355 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 5200 NW 158TH TERRACE FL (IL)
+Tax: Delinquent ($19,550)
+Zones: OZ: 5.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.285856,25.916793,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1100 BISCAYNE BLVD</name>
+    <description>Building: 401,445 sq ft
+Type: HOTEL OR MOTEL
+Owner: 1100 BISCAYNE PROPCO LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.190079,25.785174,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19507 BISCAYNE BLVD</name>
+    <description>Building: 387,151 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: AVENTURA MALL VENTURE (MO)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.145071,25.956929,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>25370 SW 137 AVE</name>
+    <description>Building: 375,167 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 25400 SW 137TH AVENUE FL OWNER (IL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.413302,25.531632,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>800 E MOWRY DR</name>
+    <description>Building: 374,632 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SPT DOLPHIN HOMESTEAD COLONY LLC (GA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 111.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.466393,25.468514,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1111 LINCOLN RD</name>
+    <description>Building: 370,836 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: 1111 LINCOLN LLC (CA)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.140562,25.790732,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5601 NW 72 AVE</name>
+    <description>Building: 370,320 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: LIT INDUSTRIAL LP (TX)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.311909,25.825634,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1545 COLLINS AVE</name>
+    <description>Building: 346,455 sq ft
+Type: HOTEL OR MOTEL
+Owner: RP HOTEL HOLDINGS LLC (VA)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.129343,25.788413,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20601 NW 17 AVE</name>
+    <description>Building: 341,091 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: FAIRFIELD CEDAR GROVE LP (CA)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.232644,25.962569,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18700 NW 27 AVE</name>
+    <description>Building: 338,467 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 18740 NW 27TH AVENUE OWNER LLC (IL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Gardens + OZ: 100.11
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.246813,25.944287,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20950 NE 27 CT</name>
+    <description>Building: 331,091 sq ft
+Type: PROFESSIONAL SERVICE BLDG
+Owner: MIAMI BEACH HEALTHCARE GROUP LTD (TN)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.147224,25.969884,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>600 NW 6 ST</name>
+    <description>Building: 323,299 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: TUSCAN PLACE LTD PARTNERSHIP (MA)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 36.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.205255,25.779135,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14900 SW 283 ST</name>
+    <description>Building: 321,122 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SW 283 HOMESTEAD LLC (CO)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.433913,25.504028,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18301 S DIXIE HWY</name>
+    <description>Building: 318,925 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: WESTDALE BAY VILLAGE LLC (TX)
+Tax: Delinquent ($18,500)
+Zones: OZ: 82.08
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.352397,25.600055,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18900 NW 27 AVE</name>
+    <description>Building: 292,626 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 18800 NW 27TH AVENUE OWNER LLC (IL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Gardens + OZ: 100.11
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.246731,25.947398,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1951 NW 7 AVE</name>
+    <description>Building: 291,755 sq ft
+Type: PROFESSIONAL SERVICE BLDG
+Owner: 7TH AVE MARKET LLC (AZ)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West + OZ: 31
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.206747,25.79491,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4310 NW 215 ST</name>
+    <description>Building: 287,958 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MG EAST LLC (IL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens + OZ: 100.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.270925,25.968464,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4350 NW 215 ST</name>
+    <description>Building: 287,958 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MG EAST LLC (IL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Gardens + OZ: 100.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.272635,25.9684,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>950 NE 124 ST</name>
+    <description>Building: 282,475 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: HORIZON AT NOMI LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: North Miami
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.178686,25.889191,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7101 NW 32 AVE</name>
+    <description>Building: 277,425 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: RLIF EAST 6 LLC (MD)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.249133,25.839354,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>919 NW 2 AVE</name>
+    <description>Building: 271,269 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: LYRIC HOUSING LTD (MA)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197381,25.783213,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>445 NW 4 ST</name>
+    <description>Building: 264,180 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MIAMI RIVER PARK ASSOC LTD (MA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 36.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.202006,25.778035,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1500 NW 119 ST</name>
+    <description>Building: 258,445 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 1560 NW 119TH STREET FL OWNER (IL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 4.09
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.224324,25.881513,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3208 NW 72 AVE</name>
+    <description>Building: 256,728 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: ATC PROPERTY OWNER LLC (CT)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.314484,25.805217,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7205 NE 4 AVE</name>
+    <description>Building: 255,124 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: SW 71 OWNER LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: OZ: 14.02
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.188938,25.84292,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1100 LINCOLN RD</name>
+    <description>Building: 253,168 sq ft
+Type: STORE
+Owner: BH 1100 LINCOLN ROAD LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Beach City Center
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.140608,25.790104,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>33501 S DIXIE HWY</name>
+    <description>Building: 252,526 sq ft
+Type: DEPARTMENT STORE
+Owner: WAL MART STORES EAST LP (AR)
+Tax: Delinquent ($18,500)
+Zones: CRA: Florida City
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.472808,25.457549,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>150 NE 79 ST</name>
+    <description>Building: 251,004 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: LAFAYETTE SQUARE LTD (MA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 14.02
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.194285,25.847095,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18403 S DIXIE HWY</name>
+    <description>Building: 250,133 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: SOUTH DADE SHOPPING LLC (IA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 82.08
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.352803,25.597673,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1250 NW 79 ST</name>
+    <description>Building: 243,564 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 1320 NW 79TH STREET FL OWNER (IL)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 10.04
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.218627,25.844428,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2003 NW 70 AVE</name>
+    <description>Building: 243,384 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: DCT BOGGY CREEK FL LP (CO)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.309875,25.793107,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1400 E MOWRY DR</name>
+    <description>Building: 235,219 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 1400 E MOWRY DRIVE FL OWNER LLC (IL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 110.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.459155,25.467624,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19501 NW 27 AVE</name>
+    <description>Building: 232,001 sq ft
+Type: STORE
+Owner: WAL MART STORES EAST LP (AR)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.24456,25.954176,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5501 NW 72 AVE</name>
+    <description>Building: 227,880 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: SPG 72ND AVE LLC (PA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.310498,25.823994,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>13700 SW 268 ST</name>
+    <description>Building: 226,882 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MALIBU GARDENS OWNER LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.414109,25.517285,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>21150 BISCAYNE BLVD</name>
+    <description>Building: 225,234 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: MIAMI BEACH HEALTHCARE GROUP LTD (TN)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.144848,25.971288,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15350 SW 284 ST</name>
+    <description>Building: 223,951 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SREIT VILLA BISCAYNE LLC (GA)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.43961,25.502133,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>25001 SW 130 AVE</name>
+    <description>Building: 218,945 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: CPT GP PRINCETON GROVES LLC (CO)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.402766,25.534857,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>12801 SW 252 ST</name>
+    <description>Building: 218,094 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 12801 SW 252 OWNER LLC (IL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.399266,25.532785,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>803 HOMESTEAD BLVD</name>
+    <description>Building: 216,282 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: KIMCO REALTY CORP (NY)
+Tax: Delinquent ($23,750)
+Zones: CRA: Homestead + OZ: 110.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.463055,25.47944,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>700 NW 1 AVE</name>
+    <description>Building: 215,207 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: B9 2MC OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.19609,25.781189,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>700 NW 1 AVE</name>
+    <description>Building: 215,207 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: B9 2MC OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.196007,25.780855,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>700 NW 1 AVE</name>
+    <description>Building: 215,207 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: B9 2MC OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.196108,25.780785,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>700 NW 1 AVE</name>
+    <description>Building: 215,207 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: B9 2MC OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.195902,25.780613,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2900 NW 75 ST</name>
+    <description>Building: 212,106 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: ECS MIAMI PROPCO LLC (GA)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.244559,25.842369,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6699 NW 36 AVE</name>
+    <description>Building: 211,928 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: LRF3 MIA 36TH AVENUE LLC (MA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.254782,25.833583,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1801 COLLINS AVE</name>
+    <description>Building: 206,500 sq ft
+Type: HOTEL OR MOTEL
+Owner: SHELBORNE HOTEL PARTNERS WC LP (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.127747,25.794154,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5705 NW 7 ST</name>
+    <description>Building: 204,356 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: GRI EQY ( AIRPARK PLAZA) LLC (MD)
+Tax: Delinquent ($18,500)
+Zones: OZ: 57.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.289336,25.778816,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>155 NE 78 ST</name>
+    <description>Building: 203,531 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: LAFAYETTE SQUARE II LTD (MA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 14.02
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.194224,25.846771,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>554 NE 1 AVE</name>
+    <description>Building: 203,528 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: FLORIDA CITY H LLC (OR)
+Tax: Delinquent ($8,000)
+Zones: CRA: Florida City
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.47668,25.454842,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5900 NW 72 AVE</name>
+    <description>Building: 197,408 sq ft
+Type: CANNERY OR DISTILLERY
+Owner: THE AMERICAN BOTTLING COMPANY (TX)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.315373,25.827264,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18665 NW 37 AVE</name>
+    <description>Building: 194,562 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MIAMI GARDENS APARTMENTS LLC (NY)
+Tax: Delinquent ($18,500)
+Zones: OZ: 100.11
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.260688,25.943571,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3200 NW 79 ST</name>
+    <description>Building: 193,510 sq ft
+Type: STORE
+Owner: WALMART STORES EAST LP (AR)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.25043,25.844443,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20805 BISCAYNE BLVD</name>
+    <description>Building: 191,674 sq ft
+Type: HOTEL OR MOTEL
+Owner: PDOF AVENTURA 20805 LLC (GA)
+Tax: Delinquent ($13,250)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.14219,25.967594,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3450 BISCAYNE BLVD</name>
+    <description>Building: 189,673 sq ft
+Type: HOTEL OR MOTEL
+Owner: ODYSSEY PROPCO VII LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.189948,25.809216,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>9761 SW 152 ST</name>
+    <description>Building: 187,775 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: VILLAGE AT CORAL REEF LLC (MA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 83.04
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.351308,25.629473,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6905 NW 25 ST</name>
+    <description>Building: 183,857 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: AMB INSTITU ALLI FUND III LLC (MA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.309672,25.798541,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6100 NW 74 AVE</name>
+    <description>Building: 181,986 sq ft
+Type: LIGHT MANUFACTURING
+Owner: BPREP PALMETTO AIRPORT LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.319657,25.829454,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7200 NW 25 ST</name>
+    <description>Building: 178,521 sq ft
+Type: LIGHT MANUFACTURING
+Owner: MP WEBSTER PARK LLC (MA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.313485,25.796372,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1850 NE 8 ST</name>
+    <description>Building: 177,485 sq ft
+Type: STORE
+Owner: LOWES HOME CENTERS INC (NC)
+Tax: Delinquent ($18,500)
+Zones: OZ: 110.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.45082,25.475424,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>26600 SW 146 CT</name>
+    <description>Building: 173,351 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SUNRISE COMMONS PRESERVATION LTD (CA)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.428738,25.519751,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>670 NW 6 ST</name>
+    <description>Building: 171,447 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: TUSCAN PLACE II LTD PARTNERSHIP (MA)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 36.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.206238,25.778978,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 170,681 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: B9 3MC OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197189,25.780159,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 170,681 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: B9 3MC OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197421,25.780115,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>27550 S DIXIE HWY</name>
+    <description>Building: 168,067 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: NARANJA LAKES HOUSING PARTNERS LP (GA)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.435761,25.510958,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>16241 NW 48 AVE</name>
+    <description>Building: 164,254 sq ft
+Type: LIGHT MANUFACTURING
+Owner: E J FLORIDA PROPERTY LLC (GA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 5.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.277721,25.920851,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5959 NW 7 ST</name>
+    <description>Building: 163,692 sq ft
+Type: HOSPITAL - PRIVATE
+Owner: MPT CORAL TERRACE STEWARD LLC (AL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 57.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.293902,25.778161,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2950 AVENTURA BLVD</name>
+    <description>Building: 158,758 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: REGENCY CENTERS L P (TX)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.141428,25.960662,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3380 NW 17 AVE</name>
+    <description>Building: 158,664 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PEARL APARTMENTS LTD (MA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 24.04
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.224117,25.80744,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2334 BISCAYNE BLVD</name>
+    <description>Building: 157,853 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: BMS OMNI LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.189593,25.800042,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14777 BISCAYNE BLVD</name>
+    <description>Building: 157,573 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: BISCAYNE COMMONS (EDENS) LLC (SC)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.09
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.155998,25.911794,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7600 NW 26 ST</name>
+    <description>Building: 157,277 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: TERRENO 26TH STREET LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.319521,25.797768,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1630 NW 70 AVE</name>
+    <description>Building: 155,914 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: DCT BOGGY CREEK FL LP (CO)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.310975,25.789678,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>318 NW 23 ST</name>
+    <description>Building: 155,237 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MANNIGAN HOLDINGS LLC (NJ)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.202397,25.798423,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6891 NW 74 ST</name>
+    <description>Building: 155,061 sq ft
+Type: LIGHT MANUFACTURING
+Owner: FIRST INDUSTRIAL L P (IL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.308385,25.841066,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 152,894 sq ft
+Type: STORE
+Owner: B9 3MC RETAIL OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.19727,25.780059,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 152,894 sq ft
+Type: STORE
+Owner: B9 3MC RETAIL OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.197623,25.780221,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>161 NW 6 ST</name>
+    <description>Building: 152,894 sq ft
+Type: STORE
+Owner: B9 3MC RETAIL OWNER LLC (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.19721,25.780639,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3300 NW 11 CT</name>
+    <description>Building: 152,745 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: ALLAPATTAH GARDENS LTD (CA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 25.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.214698,25.808451,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7455 NW 22 AVE</name>
+    <description>Building: 149,802 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SCOTT CARVER IIB LTD PARTNERSHIP (MO)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 10.04
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.23188,25.84273,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14075 BISCAYNE BLVD</name>
+    <description>Building: 149,767 sq ft
+Type: DEPARTMENT STORE
+Owner: TARGET CORP (MN)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.09
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.157218,25.905956,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1825 COLLINS AVE</name>
+    <description>Building: 149,189 sq ft
+Type: HOTEL OR MOTEL
+Owner: HPT IHG-2 PROPERTIES TRUST (MA)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Beach City Center
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.12792,25.7945,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6960 NW 36 AVE</name>
+    <description>Building: 144,675 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MIAMI BUSINESS PARK LLC (CA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.256099,25.837476,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3022 NW 73 ST</name>
+    <description>Building: 144,330 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: TERRENO 73RD STREET LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.2461,25.839505,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>16700 NW 32 AVE</name>
+    <description>Building: 144,040 sq ft
+Type: HEAVY INDUSTRIAL
+Owner: B F GOODRICH CO (CT)
+Tax: Delinquent ($18,500)
+Zones: OZ: 94
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.253759,25.926972,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2711 NE 211 ST</name>
+    <description>Building: 142,604 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: MIAMI BEACH HEALTHCARE GROUP LTD (TN)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.14682,25.971247,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2640 NW 79 ST</name>
+    <description>Building: 142,506 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 7755 NW 27TH AVENUE FL (IL)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 10.04
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.240184,25.844587,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15801 NW 49 AVE</name>
+    <description>Building: 142,415 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: PALMETTO LAKES INDUSTRIAL (NJ)
+Tax: Delinquent ($8,000)
+Zones: OZ: 5.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.279703,25.916955,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3315 NW 70 AVE</name>
+    <description>Building: 142,336 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: SECURITY CAPITAL INDUSTRIAL TR (CO)
+Tax: Delinquent ($19,550)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.309901,25.803148,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2910 NE 207 ST</name>
+    <description>Building: 139,417 sq ft
+Type: HOTEL OR MOTEL
+Owner: PDOF AVENTURA 2910 LLC (GA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.143237,25.966961,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2910 NE 207 ST</name>
+    <description>Building: 139,417 sq ft
+Type: HOTEL OR MOTEL
+Owner: PDOF AVENTURA 2910 LLC (GA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.142948,25.96711,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2301 NW 119 ST</name>
+    <description>Building: 139,369 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: WESTVIEW GARDENS PRESERVATION LTD (CA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 4.04
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.237724,25.884115,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>16175 NW 49 AVE</name>
+    <description>Building: 137,565 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: NW 49TH AVENUE LLC (IL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 5.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.279355,25.92045,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20900 BISCAYNE BLVD</name>
+    <description>Building: 136,428 sq ft
+Type: HOSPITAL - PRIVATE
+Owner: MIAMI BEACH HEALTHCARE GROUP LTD (TN)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.144737,25.969217,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>21485 NW 27 AVE</name>
+    <description>Building: 136,365 sq ft
+Type: HOTEL OR MOTEL
+Owner: AIDS HEALTHCARE FOUNDATION INC (CA)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Gardens
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.245308,25.971014,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>244 NW 72 TER</name>
+    <description>Building: 135,938 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: EMERALD TERRACE LTD PARTNERSHIP (MA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 14.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.201801,25.840995,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3108 NW 72 AVE</name>
+    <description>Building: 134,901 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: ATC PROPERTY OWNER LLC (CT)
+Tax: Delinquent ($19,550)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.314149,25.803695,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>27200 S DIXIE HWY</name>
+    <description>Building: 134,799 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: EXTRA SPACE PROPERTIES EIGHTY (UT)
+Tax: Delinquent ($8,000)
+Zones: CRA: Naranja
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.432305,25.514577,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1905 NW 74 STREET TER</name>
+    <description>Building: 133,901 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SCOTT CARVER IIB LTD PARTNERSHIP (MO)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 10.04
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.2308,25.842389,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>700 NE 2 AVE</name>
+    <description>Building: 132,618 sq ft
+Type: HOTEL OR MOTEL
+Owner: OSIB MIAMI WORLDCENTER (NY)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.190761,25.78148,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7340 NW 25 ST</name>
+    <description>Building: 131,194 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: UNITED PARCEL SERVICE INC (GA)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.317032,25.796008,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7007 NW 37 AVE</name>
+    <description>Building: 130,794 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MIAMI BUSINESS PARK LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 9.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.257366,25.837353,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>33001 S DIXIE HWY</name>
+    <description>Building: 130,077 sq ft
+Type: STORE
+Owner: HOME DEPOT USA INC (GA)
+Tax: Delinquent ($18,500)
+Zones: CRA: Florida City
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.473567,25.46048,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15555 W DIXIE HWY</name>
+    <description>Building: 129,499 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: 15555 W DIXIE LLC (CA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 2.06
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.158265,25.919253,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>10425 MARLIN RD</name>
+    <description>Building: 129,488 sq ft
+Type: WHOLESALE OUTLET
+Owner: GS CUTLER BAY LLC (MA)
+Tax: Delinquent ($18,500)
+Zones: CRA: West Perrine
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.359314,25.591934,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1880 NE 123 ST</name>
+    <description>Building: 129,121 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: CUBESMART LP (PA)
+Tax: Delinquent ($8,000)
+Zones: CRA: North Miami
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.160234,25.888938,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>8150 NW 76 AVE</name>
+    <description>Building: 127,203 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: SPG NW 76TH LLC (PA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.321247,25.849134,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1704 NW 3 TER</name>
+    <description>Building: 125,800 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: CAMERON CREEK PRESERVATION LTD (CA)
+Tax: Delinquent ($18,500)
+Zones: OZ: 114.03
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.499936,25.452373,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3405 NW 72 AVE</name>
+    <description>Building: 123,797 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: AMB PROPERTY LP (CO)
+Tax: Delinquent ($24,800)
+Zones: OZ: 91
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.310219,25.805762,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19400 SW 106 AVE</name>
+    <description>Building: 123,470 sq ft
+Type: STORE
+Owner: HOME DEPOT USA INC (GA)
+Tax: Delinquent ($8,000)
+Zones: CRA: West Perrine
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.365565,25.584956,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>30215 S DIXIE HWY</name>
+    <description>Building: 121,494 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: U HAUL CO OF FLORIDA (AZ)
+Tax: Delinquent ($18,500)
+Zones: OZ: 110.01
+Distress Score: 4/6</description>
+    <styleUrl>#pinHigh</styleUrl>
+    <Point>
+      <coordinates>-80.458194,25.485588,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19525 BISCAYNE BLVD</name>
+    <description>Building: 1,655,191 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: AVENTURA MALL VENTURE LESSOR (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.141024,25.9583,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19525 BISCAYNE BLVD</name>
+    <description>Building: 1,655,191 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: AVENTURA MALL VENTURE LESSOR (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.142186,25.955487,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>21451 NW 47 AVE</name>
+    <description>Building: 1,593,553 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MG WESTSIDE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens + OZ: 100.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.275516,25.966657,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>25 NE 5 ST</name>
+    <description>Building: 1,544,491 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 5 PLAZA LLC (FL)
+Tax: Delinquent ($23,750)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193361,25.779232,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1424 NE MIAMI PL</name>
+    <description>Building: 1,262,330 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 14 PLAZA CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193482,25.788619,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2900 BISCAYNE BLVD</name>
+    <description>Building: 1,076,188 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: OZPC NO 1 2900 BISCAYNE BLVD LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.189857,25.804734,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>650 NE 2 AVE</name>
+    <description>Building: 1,014,031 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: ZM MWC OWNER LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.190895,25.780791,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>58 NE 14 ST</name>
+    <description>Building: 990,766 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: ART PLAZA LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.192878,25.787946,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14100 BISCAYNE BLVD</name>
+    <description>Building: 937,907 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: COUNTYLINE AUTO CENTER INC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: North Miami
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.160385,25.905996,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>245 NE 14 ST</name>
+    <description>Building: 909,126 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: OPERA PLAZA LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.190366,25.788462,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2301 LAGUNA CIR</name>
+    <description>Building: 845,401 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: OPLH IV LLC (FL)
+Tax: Delinquent ($19,550)
+Zones: CRA: North Miami + OZ: 1.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.151923,25.912112,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19565 BISCAYNE BLVD</name>
+    <description>Building: 841,690 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: AVENTURA MALL VENTURE LESSOR (FL)
+Tax: Delinquent ($23,750)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.142625,25.958602,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>50 NE 9 ST</name>
+    <description>Building: 790,173 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: VERIZON DATA CENTERS V LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193032,25.782364,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2220 NE 2 AVE</name>
+    <description>Building: 790,139 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: CARDINAL PLAZA CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.191873,25.798435,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2220 NE 2 AVE</name>
+    <description>Building: 790,139 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: CARDINAL PLAZA CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.191349,25.798483,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1601 COLLINS AVE</name>
+    <description>Building: 789,479 sq ft
+Type: HOTEL OR MOTEL
+Owner: MB REDEVELOPMENT LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.129178,25.78921,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3401 N MIAMI AVE</name>
+    <description>Building: 763,761 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: CCB ASSOCIATES 39 LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Midtown Miami
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.194363,25.809631,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19501 BISCAYNE BLVD</name>
+    <description>Building: 697,157 sq ft
+Type: DEPARTMENT STORE
+Owner: AVENTURA MALL VENTURE (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.143709,25.959598,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>47 NE 15 ST</name>
+    <description>Building: 690,466 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MIAMI PLAZA LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni + OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193578,25.78957,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20505 S DIXIE HWY</name>
+    <description>Building: 688,723 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: BH SOUTH DIXIE SL MALL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 106.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.367064,25.57409,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7900 NW 27 AVE</name>
+    <description>Building: 680,945 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: NORTHSIDE CENTRE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.242943,25.847777,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>16401 NW 37 AVE</name>
+    <description>Building: 649,901 sq ft
+Type: EDUCATIONAL/SCIENTIFIC - EX
+Owner: ST THOMAS UNIVERSITY INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 5.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.256121,25.924807,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>915 NW 1 AVE</name>
+    <description>Building: 639,456 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PARK PLACE ASSOC LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.194947,25.783262,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14695 NE 18 AVE</name>
+    <description>Building: 606,000 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: YMP CENTER COURT LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: North Miami
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.162783,25.912435,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19505 BISCAYNE BLVD</name>
+    <description>Building: 599,433 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: BOULEVARD STEP VENTURES LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.142915,25.955056,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2300 NE 151 ST</name>
+    <description>Building: 591,581 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: CITY OF NORTH MIAMI (FL)
+Tax: Delinquent ($23,750)
+Zones: CRA: North Miami + OZ: 1.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.153851,25.91457,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2145 NE 164 ST</name>
+    <description>Building: 555,469 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: NORTH MB OWNER LLC (FL)
+Tax: Delinquent ($19,550)
+Zones: CRA: North Miami Beach
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.157441,25.92787,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>340 W FLAGLER ST</name>
+    <description>Building: 551,392 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: RIVER PLAZA CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 36.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.199984,25.773569,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>N/A</name>
+    <description>Building: 526,183 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: SAWYER'S LANDING COMM DEV DIST (FL)
+Tax: Delinquent ($9,050)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.198993,25.780455,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>12640 NE 12 AVE</name>
+    <description>Building: 521,002 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: OMEGA INVESTORS GROUP LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: North Miami
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.175587,25.892169,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5701 SW 72 ST</name>
+    <description>Building: 516,656 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: SUNSET OPPORTUNITIES B1 LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 76.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.286229,25.70575,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4200 NW 167 ST</name>
+    <description>Building: 513,327 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: CAPO &amp; SONS CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 5.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.270114,25.923341,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>850 NE 2 AVE</name>
+    <description>Building: 510,504 sq ft
+Type: STORE
+Owner: MWC RETAIL LLC (FL)
+Tax: Delinquent ($19,550)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.191243,25.78259,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>888 NE 2 AVE</name>
+    <description>Building: 510,504 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: MWC GARAGE, LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.190995,25.782513,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15000 BISCAYNE BLVD</name>
+    <description>Building: 507,198 sq ft
+Type: EDUCATIONAL/SCIENTIFIC - EX
+Owner: DEPT OF NATURAL RESOURCES (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.141128,25.911219,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>17945 SW 97 AVE</name>
+    <description>Building: 504,698 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: FCI PALMETTO BAY LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 82.08
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.347817,25.603176,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7665 NW 19 ST</name>
+    <description>Building: 499,254 sq ft
+Type: INSURANCE COMPANY
+Owner: SPUS7 MIAMI ACC LAND LP (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.319839,25.791509,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2060 BISCAYNE BLVD</name>
+    <description>Building: 473,168 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: 2060 BISCAYNE BLVD LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.190022,25.796579,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18224 NW 27 AVE</name>
+    <description>Building: 434,146 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: GARDENS AND 27 LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens + OZ: 94
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.247021,25.939046,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4 S KROME AVE</name>
+    <description>Building: 431,236 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: CITY OF HOMESTEAD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Homestead + OZ: 113
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.478163,25.469181,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>9500 SW 174 ST</name>
+    <description>Building: 428,116 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PALMETTO VENTURE PARTNERS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 82.08
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.345595,25.607712,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18412 HOMESTEAD AVE</name>
+    <description>Building: 426,436 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 184 HOLDINGS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: West Perrine
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.357442,25.598133,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>240 N MIAMI AVE</name>
+    <description>Building: 415,140 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: GRAND STATION PARTNERS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193939,25.776759,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>240 N MIAMI AVE</name>
+    <description>Building: 415,140 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: GRAND STATION PARTNERS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193962,25.776692,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>250 NE 25 ST</name>
+    <description>Building: 414,493 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 25 PLAZA CORP (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.189862,25.800632,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5246 NE 2 AVE</name>
+    <description>Building: 409,333 sq ft
+Type: HOSPITAL - PRIVATE
+Owner: MIA JEWISH HOME &amp; HOSP FOR AGED (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.192236,25.823939,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14650 NW 37 AVE</name>
+    <description>Building: 393,572 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MIAMI-DADE COUNTY (FL)
+Tax: Delinquent ($13,250)
+Zones: OZ: 9808
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.259139,25.910391,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>651 NE 1 AVE</name>
+    <description>Building: 389,835 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: MWC GARAGE H LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.191952,25.780785,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>651 NE 1 AVE</name>
+    <description>Building: 389,835 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: MWC GARAGE H LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.191189,25.780927,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4255 NW 156 ST</name>
+    <description>Building: 389,450 sq ft
+Type: EDUCATIONAL/SCIENTIFIC - EX
+Owner: FLORIDA MEMORIAL UNIVERSITY INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 5.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.270912,25.918188,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>25850 SW 140 CT</name>
+    <description>Building: 382,355 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MUVHOME26 LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.417387,25.528691,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2200 SOLE MIA SQUARE LN</name>
+    <description>Building: 379,726 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SM PARCEL B LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: North Miami + OZ: 1.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.152541,25.909014,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>16165 S DIXIE HWY</name>
+    <description>Building: 376,983 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: SOUTH MOTOR COMPANY OF DADE CO (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 82.08
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.344621,25.619007,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1642 NE 1 AVE</name>
+    <description>Building: 374,672 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: UNI 17TH STREET LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni + OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.192758,25.791525,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7675 NW 80 TER</name>
+    <description>Building: 374,086 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: TA PALMETTO LOGISTICS (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.320411,25.845677,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>645 IVES DAIRY RD</name>
+    <description>Building: 369,472 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: FIFTEEN FLA MULTIFAMILY LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 98.07
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.189184,25.962157,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1691 MICHIGAN AVE</name>
+    <description>Building: 363,061 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: RK RIVANI LLC LEASEE (FL)
+Tax: Delinquent ($23,750)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.138238,25.791357,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>234 NE 79 ST</name>
+    <description>Building: 361,770 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: LUBINS DEVELOPMENT CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 14.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.192267,25.846979,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>21500 BISCAYNE BLVD</name>
+    <description>Building: 353,970 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: OPTIMA INTERNATIONAL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.143727,25.974362,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7300 NW 19 ST</name>
+    <description>Building: 353,374 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: SPUS7 MIAMI ACC LAND LP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.315596,25.790749,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2500 BISCAYNE BLVD</name>
+    <description>Building: 351,060 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: RESPARK WYNWOOD BAY LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.18967,25.801241,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2201 SOLE MIA SQUARE LN</name>
+    <description>Building: 344,457 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SM PARCEL A LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: North Miami + OZ: 1.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.152843,25.910075,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2115 N MIAMI AVE</name>
+    <description>Building: 336,644 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: PRH N MIAMI LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Omni
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.194445,25.797381,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20401 BISCAYNE BLVD</name>
+    <description>Building: 328,952 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: PROMVENTURE LIMITED PARTNERSHIP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.144703,25.966041,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5060 NE 2 AVE</name>
+    <description>Building: 327,338 sq ft
+Type: HOSPITAL - PRIVATE
+Owner: MIAMI JEWISH HOME &amp; HOSPITAL (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.194601,25.823231,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>23 NE 17 TER</name>
+    <description>Building: 325,757 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: WYNWOOD HAUS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni + OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.194437,25.792635,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>50 NE 32 ST</name>
+    <description>Building: 324,208 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: MIDTOWN MIAMI COMMUNITY DEV (FL)
+Tax: Delinquent ($19,550)
+Zones: CRA: Midtown Miami
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.19401,25.806548,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>162 NE 25 ST</name>
+    <description>Building: 317,572 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 26 PLAZA CORP (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.19155,25.800554,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2900 NW 72 AVE</name>
+    <description>Building: 314,776 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MIAMI AIRPORT IND EQUITIES &amp;ETALS (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.313508,25.802108,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5900 NW 74 AVE</name>
+    <description>Building: 314,441 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: COSTEX CORPORATION (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.319445,25.827334,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>13720 SW 272 ST</name>
+    <description>Building: 313,656 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PSG SOUTH POINTE (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.413162,25.514051,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>12851 SW 242 ST</name>
+    <description>Building: 313,019 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: WINDMILL FARMS ASSOCIATES LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.399565,25.543033,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2150 N MIAMI AVE</name>
+    <description>Building: 303,688 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: PRH N MIAMI LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195425,25.797899,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>225 NE 23 ST</name>
+    <description>Building: 302,988 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: WYNWOOD TOWER APTS LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.190456,25.799703,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>12555 NW 27 AVE</name>
+    <description>Building: 302,179 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: KINGS TERRACE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 4.04
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.242051,25.888358,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1901 COLLINS AVE</name>
+    <description>Building: 300,128 sq ft
+Type: HOTEL OR MOTEL
+Owner: SHORE CLUB TRUSTEE LLC TRS (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.128411,25.79496,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>90 NE 41 ST</name>
+    <description>Building: 296,300 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: PARADISE PLAZA ASSOCIATES LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193806,25.813986,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1373 NW 35 ST</name>
+    <description>Building: 291,988 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: ALLAPATTAH RESIDENTIAL LP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 25.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.21948,25.809265,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20807 BISCAYNE BLVD</name>
+    <description>Building: 290,319 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: AVENTURA PROPERTY OWNER LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.142022,25.968773,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>610 NW 60 ST</name>
+    <description>Building: 275,769 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: TACOLCY EDISON GARDENS LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 19.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.206628,25.829741,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19495 BISCAYNE BLVD</name>
+    <description>Building: 272,392 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: OTP CAPITAL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.145863,25.955658,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15000 SW 272 ST</name>
+    <description>Building: 269,238 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: AMBAR TRAIL LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.434264,25.513799,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2340 COLLINS AVE</name>
+    <description>Building: 266,786 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: NORTH BAY OWNER LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.128273,25.799065,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>180 NE 39 ST</name>
+    <description>Building: 264,272 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: OAK PLAZA ASSOCIATES (DEL) LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.192055,25.812191,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1551 NE 167 ST</name>
+    <description>Building: 264,056 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: GRAND ISLAND SQUARE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: North Miami Beach
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.16927,25.929833,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1550 COLLINS AVE</name>
+    <description>Building: 261,800 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: CITY OF MIAMI BEACH (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.130725,25.788943,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>408 LINCOLN RD</name>
+    <description>Building: 256,729 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: 420 LINCOLN RD ASSOCIATES LTD (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.132491,25.790231,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>13700 SW 256 ST</name>
+    <description>Building: 256,176 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: BIG SOPHIA FL LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.413332,25.528329,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5600 NE 4 AVE</name>
+    <description>Building: 253,478 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PINNACLE PLACE LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 20.04
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.188366,25.827649,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>27077 S FEDERAL HWY</name>
+    <description>Building: 253,088 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: RICHMAN SOUTH MIAMI DEVELOPMENT (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.429605,25.514965,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7600 NW 19 ST</name>
+    <description>Building: 252,907 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: SPUS7 MIAMI ACC LAND LP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.319177,25.791035,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>16051 S DIXIE HWY</name>
+    <description>Building: 251,016 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: EYP SOUTH DADE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 82.08
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.34264,25.621482,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1 LINCOLN RD HOTEL</name>
+    <description>Building: 250,000 sq ft
+Type: HOTEL OR MOTEL
+Owner: DI LIDO BEACH HOTEL CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.129019,25.791438,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14570 SW 280 ST</name>
+    <description>Building: 249,509 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: VILLA CAPRI ASSOCIATES LTD (FL)
+Tax: Delinquent ($23,750)
+Zones: CRA: Naranja
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.427181,25.505712,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>825 NW 5 AVE</name>
+    <description>Building: 245,349 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SOLIMAR ASSOCIATES LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Florida City + OZ: 113
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.481965,25.457965,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7901 NW 7 AVE</name>
+    <description>Building: 242,558 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PINNACLE PARK LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 10.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.208645,25.84721,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195627,25.780156,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195807,25.777388,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195625,25.777612,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195554,25.778053,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195876,25.778235,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195782,25.778234,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195625,25.778144,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195729,25.778606,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.19599,25.779238,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195889,25.779264,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195998,25.779727,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195729,25.779231,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195852,25.78037,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195961,25.780433,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>350 NW 1 AVE</name>
+    <description>Building: 241,508 sq ft
+Type: STORE
+Owner: DTS DT RETAIL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.195731,25.780557,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5725 NW 2 AVE</name>
+    <description>Building: 236,193 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: BRM SOUTHEAST LAND HOLDINGS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 20.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.199943,25.828177,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20801 BISCAYNE BLVD</name>
+    <description>Building: 235,123 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: AVENTURA PROPERTY OWNER LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.143509,25.968072,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3800 NE 1 AVE</name>
+    <description>Building: 234,771 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: OAK PLAZA ASSOCIATES DEL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193959,25.812055,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5900 NW 7 AVE</name>
+    <description>Building: 234,197 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: TACOLCY TUSCANY COVE I LLLP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 19.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.209035,25.830128,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>135 NE 20 TER</name>
+    <description>Building: 228,529 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: BRAMAN LEIBOWITZ SERVICE AND (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.192073,25.796631,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1600 NE 135 ST</name>
+    <description>Building: 228,242 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: FOREST PLACE LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: North Miami + OZ: 2.20
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.16613,25.899818,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>26210 PARKER AVE</name>
+    <description>Building: 227,738 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 27077 SFH LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.422764,25.523205,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14155 SW 288 ST</name>
+    <description>Building: 225,691 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: BISCAYNE DRIVE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.419859,25.500664,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1781 NW 23 TER</name>
+    <description>Building: 224,852 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: THE YOUNG MENS CHRISTIAN (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 24.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.224784,25.799172,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6910 NW 12 ST</name>
+    <description>Building: 221,399 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: AJA PROPERTIES NO 8 LTD (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.309858,25.782503,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>755 NW 67 ST</name>
+    <description>Building: 217,875 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: THE VILLAGE MIAMI LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 19.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.210148,25.837015,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3325 NW 62 ST</name>
+    <description>Building: 216,109 sq ft
+Type: FOOD PROCESSING
+Owner: TRUJILLO BROTHERS OF MIAMI DADE (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 9.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.252363,25.831471,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3520 NW 72 AVE</name>
+    <description>Building: 213,456 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: WHITEFIELD &amp; BLOOM CO (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.314136,25.806971,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1470 NW 36 ST</name>
+    <description>Building: 213,189 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: TCG ALLAPATTAH 14 LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 25.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.221213,25.809335,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1657 N MIAMI AVE</name>
+    <description>Building: 210,658 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: FSL DEVELOPMENT LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni + OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.194239,25.791475,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>120 NE 8 ST</name>
+    <description>Building: 208,951 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: SARRIA HOLDINGS IV INC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Homestead + OZ: 111.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.472543,25.476267,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7924 NE 2 AVE</name>
+    <description>Building: 208,527 sq ft
+Type: HOTEL OR MOTEL
+Owner: MD 79TH HOLDING LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 14.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193366,25.848191,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4141 NE 2 AVE</name>
+    <description>Building: 207,948 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: DACRA DESIGN 4141 LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.190904,25.814506,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>26655 SW 142 AVE</name>
+    <description>Building: 201,678 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: HARBOUR SPRINGS (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.42037,25.519427,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1400 NW 54 ST</name>
+    <description>Building: 200,793 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: C4 GATEWAY LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 19.04
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.220836,25.8243,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>10362 SW 212 ST</name>
+    <description>Building: 200,048 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: CUTLER HAMMOCK PRESERVATION LP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 106.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.358962,25.56816,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14301 SW 268 ST</name>
+    <description>Building: 199,350 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: THE LANDINGS AT CORAL TOWN (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.423268,25.518346,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5700 NW 37 AVE</name>
+    <description>Building: 196,766 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: PERRINE MARLIN INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 17.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.258431,25.827383,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>8300 NE 1 PL</name>
+    <description>Building: 196,744 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PINNACLE SQUARE LTD (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 14.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.194113,25.85177,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1155 NE 137 ST</name>
+    <description>Building: 193,949 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: WEST DIXIE TOWERS INC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: North Miami
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.175813,25.902419,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>340 23 ST</name>
+    <description>Building: 193,330 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: CITY OF MIAMI BEACH (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.129802,25.798698,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2401 NW 69 ST</name>
+    <description>Building: 192,866 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: RLF I C SPE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 15.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.238236,25.837916,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5035 NE 2 AVE</name>
+    <description>Building: 190,523 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SPV J AND S NV LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.189379,25.824065,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5255 NW 159 ST</name>
+    <description>Building: 190,397 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: AG RC III PALMETTO LAKES (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 5.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.285365,25.91903,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>13701 SW 270 ST</name>
+    <description>Building: 190,384 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: HIDDEN GROVE HOUSING L P (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.415135,25.515481,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19950 W COUNTRY CLUB DR</name>
+    <description>Building: 189,679 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: CABI AVENTURA OFFICES LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.139972,25.960445,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>13105 SW 248 ST</name>
+    <description>Building: 189,008 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: HTG PRINCETON PARK LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.405578,25.53856,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4400 NW 74 AVE</name>
+    <description>Building: 187,860 sq ft
+Type: LIGHT MANUFACTURING
+Owner: F A M WAREHOUSE CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.319148,25.814887,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1698 ALTON RD</name>
+    <description>Building: 184,875 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: 1698 ALTON ROAD VENTURES LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.141511,25.791867,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1977 NE 8 ST</name>
+    <description>Building: 184,419 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: STOR ALL NE 8TH STREET LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 110.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.451266,25.478242,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>13735 SW 262 ST</name>
+    <description>Building: 184,135 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: THE AVENUE AT NARANJA LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.413651,25.524251,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14381 SW 268 ST</name>
+    <description>Building: 183,633 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: THE HEIGHTS AT CORAL TOWN PRK LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.424468,25.519194,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>8600 NW S RIVER DR</name>
+    <description>Building: 182,379 sq ft
+Type: LIGHT MANUFACTURING
+Owner: WMG MEDLEY OWNER LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.32083,25.850742,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>24101 S DIXIE HWY</name>
+    <description>Building: 180,872 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PINE GROVE APTS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.403182,25.542438,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>222 NE 25 ST</name>
+    <description>Building: 180,646 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SECOND PLAZA CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.19074,25.800542,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14408 SW 280 ST</name>
+    <description>Building: 179,600 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: VILLA CAPRI II ASSOCIATES LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.425325,25.504502,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>151 NE 41 ST</name>
+    <description>Building: 179,418 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: PARADISE PLAZA ASSOCIATES LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193062,25.814383,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1000 NW 1 AVE</name>
+    <description>Building: 179,072 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: ARK DEVELOPMENT/OVERTOWN I LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.196584,25.783913,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2750 W 68 ST</name>
+    <description>Building: 178,500 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: SARRIA HOLDINGS INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 134
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.338433,25.882975,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2035 N MIAMI AVE</name>
+    <description>Building: 178,429 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: WYNWOOD WORKS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.194644,25.796312,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1595 NE 135 ST</name>
+    <description>Building: 177,771 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PAUL FELDMAN PA TRS (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: North Miami
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.167212,25.900612,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2920 NE 207 ST</name>
+    <description>Building: 177,699 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: PARKSQUARE GARAGE LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.142889,25.966452,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2920 NE 207 ST</name>
+    <description>Building: 177,699 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: PARKSQUARE GARAGE LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.143306,25.966595,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2920 NE 207 ST</name>
+    <description>Building: 177,699 sq ft
+Type: PARKING LOT/MOBILE HOME PARK
+Owner: PARKSQUARE GARAGE LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.142783,25.966685,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4775 NW 157 ST</name>
+    <description>Building: 176,052 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: PALMETTO LAKES INVESTORS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 5.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.277537,25.91709,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>21343 NW 2 AVE</name>
+    <description>Building: 174,670 sq ft
+Type: REGIONAL SHOPPING CENTER
+Owner: COUNTY LINE CENTER LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 98.07
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.204146,25.971738,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3555 NW 77 AVE</name>
+    <description>Building: 171,223 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: THE E T FAMILY PARTNERSHIP (FL)
+Tax: Delinquent ($19,550)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.319991,25.805212,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>21600 SW 104 CT</name>
+    <description>Building: 170,958 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: CUTLER RIVERSIDE PRESERVATION LP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 106.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.361192,25.565203,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15455 W DIXIE HWY</name>
+    <description>Building: 170,932 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: NO MIAMI BEACH (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 2.06
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.159826,25.917657,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7100 NW 37 AVE</name>
+    <description>Building: 166,162 sq ft
+Type: PACKING PLANT
+Owner: OMNI REALTY INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 9.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.258433,25.839071,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>24205 SW 127 PL</name>
+    <description>Building: 165,300 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PRINCETON LANDINGS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.39755,25.541219,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>17650 CLEVELAND AVE</name>
+    <description>Building: 164,639 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: PALMETTO BAY STORAGE (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: West Perrine + OZ: 83.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.352053,25.605586,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4320 NW 167 ST</name>
+    <description>Building: 164,445 sq ft
+Type: STORE
+Owner: EYP MIAMI LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 5.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.272614,25.924139,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1601 DREXEL AVE</name>
+    <description>Building: 164,126 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: 420 LINCOLN ROAD DEVELOPMENT LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.132721,25.789502,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>10701 SW 211 ST</name>
+    <description>Building: 164,009 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: BIJ MOTORS CUTLER BAY LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 106.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.365439,25.573128,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2801 NW 74 AVE</name>
+    <description>Building: 163,375 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: NEW WORLD TRADE CTR II (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.315811,25.799186,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1156 NW 79 ST</name>
+    <description>Building: 162,923 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SUNSET POINTE ASSOCIATES LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 10.04
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.21632,25.845777,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>975 NW 95 ST</name>
+    <description>Building: 161,909 sq ft
+Type: EDUCATIONAL/SCIENTIFIC - EX
+Owner: ADES FAMILY FOUNDATION INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 4.08
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.212529,25.862269,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>29003 S DIXIE HWY</name>
+    <description>Building: 161,053 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: FAIR OAKS LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.447951,25.497061,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18275 SW 98 AVENUE RD</name>
+    <description>Building: 161,012 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PALMETTO BAY TH LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 82.08
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.350852,25.600498,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18096 SW 107 AVE</name>
+    <description>Building: 160,220 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: CENTERRA ASSOC LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: West Perrine
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.366772,25.601218,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4800 NW 37 AVE</name>
+    <description>Building: 159,535 sq ft
+Type: LIGHT MANUFACTURING
+Owner: FACTORY TOWN HOLDINGS LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 17.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.257729,25.817949,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1500 E MOWRY DR</name>
+    <description>Building: 158,116 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: COLONY LK PRESERVATION L P (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 110.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.456235,25.468525,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1201 NW 3 AVE</name>
+    <description>Building: 158,005 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: ISLAND LIVING APARTMENTS LTD (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West + OZ: 34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.199598,25.786074,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3775 NW 77 ST</name>
+    <description>Building: 157,002 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: LAPARKAN TRADING LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 9.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.259042,25.843397,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2060 NE 2 AVE</name>
+    <description>Building: 156,376 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: 2060 NE 2ND AVENUE LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.191194,25.796662,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3250 NW 65 ST</name>
+    <description>Building: 155,070 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: TRUJILLO BROTHERS OF (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 9.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.250553,25.832836,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5660 NW 167 ST</name>
+    <description>Building: 154,595 sq ft
+Type: STORE
+Owner: DORSAN DEV LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 5.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.291226,25.923399,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>25851 S DIXIE HWY</name>
+    <description>Building: 153,818 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: CORAL BAY COVE LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.419861,25.526025,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>501 NW 5 AVE</name>
+    <description>Building: 153,483 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: RIVER OAKS PARTNERS LTD (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 114.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.482019,25.452815,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1177 NW 81 ST</name>
+    <description>Building: 152,809 sq ft
+Type: PACKING PLANT
+Owner: JACOB FLEISHMAN &amp; SONS INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 10.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.21672,25.849533,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>26760 SW 142 AVE</name>
+    <description>Building: 150,909 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: TOWER ROAD GARDENS LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.42169,25.518546,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14585 BISCAYNE BLVD</name>
+    <description>Building: 149,946 sq ft
+Type: WHOLESALE OUTLET
+Owner: OLETA PARTNERS BISCAYNE (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.156307,25.909492,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3000 BISCAYNE BLVD</name>
+    <description>Building: 149,739 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: 3050 BISCAYNE PROPERTIES LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.190115,25.805762,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>21288 BISCAYNE BLVD</name>
+    <description>Building: 149,522 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: PUBLIC STORAGE PROPERTIES VI INC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.144317,25.971909,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2410 NW 185 TER</name>
+    <description>Building: 149,071 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: PELICAN COVE ASSOCIATES LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.243032,25.943526,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2360 COLLINS AVE</name>
+    <description>Building: 148,514 sq ft
+Type: HOTEL OR MOTEL
+Owner: DEAN MB PROPCO LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.127839,25.799845,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15100 SW 272 ST</name>
+    <description>Building: 148,228 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: AMBAR TRAIL LTD (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.435819,25.512932,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3455 NW 54 ST</name>
+    <description>Building: 147,767 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: WSLP SEABOARD OWNER IX L P (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 17.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.252293,25.8241,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2800 NW 72 AVE</name>
+    <description>Building: 147,149 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MIAMI AIRPORT IND EQUITIES &amp;ETALS (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.314079,25.799811,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2545 NW 20 ST</name>
+    <description>Building: 146,770 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: ACORN MINI STORAGE OF MIAMI LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 24.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.23809,25.795031,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>20507 S DIXIE HWY</name>
+    <description>Building: 146,658 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: BH RETAIL SOUTH DIXIE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 106.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.369733,25.572428,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1776 BISCAYNE BLVD</name>
+    <description>Building: 146,599 sq ft
+Type: SUPERMARKET
+Owner: S BISCAYNE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Omni + OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.189422,25.793058,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2350 NW 54 ST</name>
+    <description>Building: 145,627 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: EHDOC PEPPER TOWERS LIMITED (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 18.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.235219,25.823725,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19900 W COUNTRY CLUB DR</name>
+    <description>Building: 145,250 sq ft
+Type: HOTEL OR MOTEL
+Owner: N SITE FEE OWNER LLC (FEE) (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 1.34
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.139983,25.959748,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1150 NW 72 AVE</name>
+    <description>Building: 145,061 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: ZEREP TOWERS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.313062,25.782197,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>10471 SW 216 ST</name>
+    <description>Building: 144,629 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: CUTLER VISTA HOUSING L P (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 106.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.360549,25.568741,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6101 SUNSET DR</name>
+    <description>Building: 144,130 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: METRO SOUTH SENIOR APARTMENTS LP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 76.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.292249,25.704658,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1551 NW 36 ST</name>
+    <description>Building: 144,066 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: FRIENDSHIP TOWER LTD (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 25.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.222164,25.810038,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3510 BISCAYNE BLVD</name>
+    <description>Building: 142,926 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: CRC COMMUNITY SUPPORT (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 27.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.189894,25.809589,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15302 SW 282 ST</name>
+    <description>Building: 141,006 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MIAMI-DADE COUNTY (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.440036,25.504075,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1150 W 79 ST</name>
+    <description>Building: 140,708 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: AIRRAS GROUP INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 93.07
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.306639,25.893886,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>8130 NW 74 AVE</name>
+    <description>Building: 140,276 sq ft
+Type: LIGHT MANUFACTURING
+Owner: TA PALMETTO LOGISTICS (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.320372,25.847862,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7205 NW 19 ST</name>
+    <description>Building: 139,028 sq ft
+Type: OFFICE BUILDING - ONE STORY
+Owner: SPUS7 MIAMI ACC LAND LP (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.315437,25.7916,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7705 NW 22 AVE</name>
+    <description>Building: 139,018 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: THE CORINTHIAN APARTMENTS LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 10.04
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.23227,25.845463,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1685 COLLINS AVE</name>
+    <description>Building: 138,856 sq ft
+Type: HOTEL OR MOTEL
+Owner: BEACH HOTEL ASSOCIATES LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Beach City Center
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.128582,25.792143,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>28300 S DIXIE HWY</name>
+    <description>Building: 138,683 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: VERBENA LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.441931,25.504355,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>106 PONCE DE LEON BLVD</name>
+    <description>Building: 138,394 sq ft
+Type: SUPERMARKET
+Owner: PUBLIX SUPER MARKETS INC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 55.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.255015,25.770958,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1110 E MOWRY DR</name>
+    <description>Building: 137,682 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: R P G OF HOMESTEAD LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 111.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.461168,25.469459,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>106 PONCE DE LEON BLVD</name>
+    <description>Building: 137,654 sq ft
+Type: SUPERMARKET
+Owner: PUBLIX SUPER MARKETS INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 55.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.255104,25.771545,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7000 NW 25 ST</name>
+    <description>Building: 137,560 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: JORKEN MIAMI LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.311105,25.796139,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2521 NW 72 AVE</name>
+    <description>Building: 136,918 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: ABRAMS-LLEWELLYN II LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.312069,25.797847,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>10400 SW 216 ST</name>
+    <description>Building: 136,880 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: HAINLIN MILLS PRESERVATION LP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 106.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.359863,25.566063,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>777 SW 37 AVE</name>
+    <description>Building: 136,620 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: GENERAL FUNDING CORP (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 55.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.254907,25.765179,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3401 NW 17 AVE</name>
+    <description>Building: 135,669 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: ALLAPATTAH TRACE APARTMENTS LTD (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 25.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.223575,25.808024,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2137 NW 36 ST</name>
+    <description>Building: 135,284 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SLATE MIAMI APARTMENTS (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 24.04
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.230742,25.80987,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7499 NW 31 ST</name>
+    <description>Building: 135,256 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: PASSION GROWERS LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.318733,25.803059,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2431 NW 20 ST</name>
+    <description>Building: 134,937 sq ft
+Type: LUMBER YARD OR MILL
+Owner: FLORIDA LUMBER CO (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 24.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.23693,25.794934,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2431 NW 20 ST</name>
+    <description>Building: 134,937 sq ft
+Type: LUMBER YARD OR MILL
+Owner: FLORIDA LUMBER CO (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 24.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.23724,25.795664,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>9910 HIBISCUS ST</name>
+    <description>Building: 134,794 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: HTG MERRICK LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: West Perrine + OZ: 83.09
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.352015,25.604091,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>300 SHARAZAD BLVD</name>
+    <description>Building: 134,146 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: RUDG TOWN CENTER LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Opa-Locka
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.253589,25.902239,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3150 NW 42 ST</name>
+    <description>Building: 133,893 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: REGATTA PLACE ASSOCIATES LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 17.02
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.248089,25.8131,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3300 NW 73 ST</name>
+    <description>Building: 133,883 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: GONZALEZ REAL ESTATE HOLDINGS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street + OZ: 9.03
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.253199,25.839729,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1901 NW 79 ST</name>
+    <description>Building: 133,625 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: REGENCY POINTE APTS LTD &amp; (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: NW 79th Street
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.230077,25.847717,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7000 NW 33 TER</name>
+    <description>Building: 133,196 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: PAULDAN LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.311046,25.804503,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5175 NE 2 CT</name>
+    <description>Building: 132,828 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: SPV J AND S NV LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 22.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.189605,25.823821,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6301 NW 74 AVE</name>
+    <description>Building: 132,804 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: 6300 NW 72 AVE INC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.316447,25.830996,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>17800 SW 107 AVE</name>
+    <description>Building: 132,692 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 17800 SW 107 AVE LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: West Perrine
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.36586,25.602612,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3475 NW 60 ST</name>
+    <description>Building: 131,889 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: OMNI REALTY INC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 17.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.251628,25.829489,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>850 N MIAMI BEACH BLVD</name>
+    <description>Building: 131,504 sq ft
+Type: STORE
+Owner: SONTIC WARD INC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: North Miami Beach
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.182871,25.927602,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>70 E 7 ST</name>
+    <description>Building: 131,392 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: HIALEAH HOUSING AUTHORITY (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 16.05
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.280139,25.827709,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2600 NW 72 AVE</name>
+    <description>Building: 129,863 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MIAMI AIRPORT IND EQUITIES &amp;ETALS (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.313882,25.798803,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14311 SW 258 LN</name>
+    <description>Building: 128,917 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: KEYS CROSSING LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.423695,25.527251,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14340 SW 260 ST</name>
+    <description>Building: 128,873 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MCR LUMBER &amp; MATERIALS SUPPLY INC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.423747,25.524936,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4401 NW 74 AVE</name>
+    <description>Building: 128,868 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MIAMI AIRPORT IND EQUITIES &amp;ETALS (FL)
+Tax: Delinquent ($9,050)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.317089,25.814809,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7650 NW 69 AVE</name>
+    <description>Building: 128,574 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: 7600 MEDLEY INDUSTRIAL LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.310778,25.843124,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18901 SW 106 AVE</name>
+    <description>Building: 127,072 sq ft
+Type: STORE
+Owner: MMG CENTRE AT CUTLER BAY LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: West Perrine
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.362155,25.590283,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>26000 SW 144 AVENUE RD</name>
+    <description>Building: 126,580 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: CIRCLE CREEK APARTMENTS LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.425712,25.524392,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14500 NE 6 AVE</name>
+    <description>Building: 126,507 sq ft
+Type: MIXED USE-STORE/RESIDENTIAL
+Owner: PANTHEON OCEAN KING (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: North Miami
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.187809,25.908754,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>26710 SW 140 AVE</name>
+    <description>Building: 125,405 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: WOODLAND GROVE APARTMENTS LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.420378,25.518492,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>7001 NW 25 ST</name>
+    <description>Building: 125,168 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: GJT PARTNERS LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.310977,25.797973,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>601 NE 1 AVE</name>
+    <description>Building: 125,007 sq ft
+Type: OFFICE BUILDING - MULTISTORY
+Owner: SIXTH STREET MIAMI PARTNERS LLC (FL)
+Tax: Delinquent ($8,000)
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.191295,25.780199,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14701 NW 27 AVE</name>
+    <description>Building: 124,800 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: MIAMI-DADE COUNTY (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Opa-Locka
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.24315,25.908331,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1260 NW 72 AVE</name>
+    <description>Building: 124,707 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: EL DORADO ENTERPRISES /MIAMI INC (FL)
+Tax: Delinquent ($13,250)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.313067,25.783197,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5400 NW 32 AVE</name>
+    <description>Building: 123,959 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MLIP LLC (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 17.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.249582,25.824045,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14221 SW 267 ST</name>
+    <description>Building: 123,846 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: LA JOYA ESTATES LTD (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Naranja Expansion
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.421515,25.519481,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2601 NW 207 ST</name>
+    <description>Building: 122,450 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: 491 UNITS MIAMI GARDENS (FL)
+Tax: Delinquent ($18,500)
+Zones: CRA: Miami Gardens
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.244877,25.965213,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1690 NE 8 ST</name>
+    <description>Building: 121,095 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: 1590 HOMESTEAD (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 110.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.454415,25.475927,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>4225 NW 72 AVE</name>
+    <description>Building: 121,001 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: DALBANI CORPORATION (FL)
+Tax: Delinquent ($18,500)
+Zones: OZ: 91
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.312121,25.812972,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3690 NW 62 ST</name>
+    <description>Building: 120,563 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: ALFONCITO INVESTMENTS INC (FL)
+Tax: Delinquent ($8,000)
+Zones: OZ: 17.01
+Distress Score: 3/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.256559,25.830342,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>19503 BISCAYNE BLVD</name>
+    <description>Building: 703,605 sq ft
+Type: DEPARTMENT STORE
+Owner: AVENTURA MALL VENTURE (OH)
+Tax: Current
+Zones: OZ: 1.34
+Distress Score: 1/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.14057,25.95638,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3401 NW 72 AVE</name>
+    <description>Building: 287,228 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: AMB PROPERTY LP (MA)
+Tax: Current
+Zones: OZ: 91
+Distress Score: 1/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.31028,25.805924,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1995 NE 142 ST</name>
+    <description>Building: 266,092 sq ft
+Type: AUTOMOTIVE OR MARINE
+Owner: G1R FLORIDA LLC (TX)
+Tax: Current
+Zones: CRA: North Miami
+Distress Score: 1/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.159665,25.907319,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>15699 W DIXIE HWY</name>
+    <description>Building: 171,581 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: DIXIE STORAGE SPE LLC (NV)
+Tax: Current
+Zones: OZ: 2.06
+Distress Score: 1/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.156931,25.91926,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>800 TENNESSEE RD</name>
+    <description>Building: 165,761 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: POAH CAMPBELL ARMS LLC (MA)
+Tax: Current
+Zones: OZ: 110.01
+Distress Score: 1/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.461425,25.478927,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>1396 NE 125 ST</name>
+    <description>Building: 154,423 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: 1396 NE 125TH LLC (CA)
+Tax: Current
+Zones: CRA: North Miami
+Distress Score: 1/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.171613,25.890301,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>3409 NW 72 AVE</name>
+    <description>Building: 151,039 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: AMB PROPERTY LP (MA)
+Tax: Current
+Zones: OZ: 91
+Distress Score: 1/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.31061,25.807112,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>850 NE 2 AVE</name>
+    <description>Building: 510,504 sq ft
+Type: STORE
+Owner: MWC RETAIL LLC (FL)
+Tax: Current
+Zones: CRA: SE  Overtown/Park West
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.190856,25.782263,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>50 NE 32 ST</name>
+    <description>Building: 324,208 sq ft
+Type: STORE
+Owner: CCB ASSOCIATES 39 LLC (FL)
+Tax: Current
+Zones: CRA: Midtown Miami
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.1941,25.80665,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>50 NE 32 ST</name>
+    <description>Building: 324,208 sq ft
+Type: STORE
+Owner: CCB ASSOCIATES 39 LLC (FL)
+Tax: Current
+Zones: CRA: Midtown Miami
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.193916,25.806653,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>495 NW 71 ST</name>
+    <description>Building: 194,329 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: THE YOUNG MENS CHRISTIAN (FL)
+Tax: Current
+Zones: OZ: 14.01
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.204259,25.840184,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2970 NW 75 AVE</name>
+    <description>Building: 188,043 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: AJA PROPERTIES # 6 (FL)
+Tax: Current
+Zones: OZ: 91
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.318919,25.801473,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>500 17 ST</name>
+    <description>Building: 186,654 sq ft
+Type: ENCLOSED THEATER/AUDITORIUM
+Owner: CITY OF MIAMI BEACH (FL)
+Tax: Current
+Zones: CRA: Miami Beach City Center
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.133255,25.791724,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14800 SOLE MIA WAY</name>
+    <description>Building: 184,816 sq ft
+Type: STORE
+Owner: CITY OF NORTH MIAMI FINANCE DEPT (FL)
+Tax: Current
+Zones: CRA: North Miami + OZ: 1.09
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.153665,25.912875,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>8272 NW S RIVER DR</name>
+    <description>Building: 179,733 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: MIAMI MEDLEY BUSINESS IND PK LLC (FL)
+Tax: Current
+Zones: OZ: 91
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.316873,25.848761,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>14536 SW 284 ST</name>
+    <description>Building: 156,548 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: VILLA CAPRI III ASSOCIATES LTD (FL)
+Tax: Current
+Zones: CRA: Naranja
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.427076,25.504868,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>6600 NW 74 AVE</name>
+    <description>Building: 137,904 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: AMERICAN GIFT CORP (FL)
+Tax: Current
+Zones: OZ: 91
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.318286,25.834353,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>2370 NW 17 AVE</name>
+    <description>Building: 136,462 sq ft
+Type: MULTIFAMILY 10 UNITS PLUS
+Owner: THE YOUNG MENS CHRISTIAN (FL)
+Tax: Current
+Zones: OZ: 24.02
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.223724,25.799088,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>5601 NW 159 ST</name>
+    <description>Building: 124,126 sq ft
+Type: WAREHOUSE TERMINAL OR STG
+Owner: VIDA ABUNDANTE INC (FL)
+Tax: Current
+Zones: OZ: 5.01
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.291153,25.918273,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>18350 NW 7 AVE</name>
+    <description>Building: 120,835 sq ft
+Type: COMMUNITY SHOPPING CENTER
+Owner: MIAMI GARDENS HOLDINGS LLC (FL)
+Tax: Current
+Zones: OZ: 99.05
+Distress Score: 0/6</description>
+    <styleUrl>#pinMed</styleUrl>
+    <Point>
+      <coordinates>-80.214556,25.943876,0</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>
