@@ -1,6 +1,38 @@
 [
   {
     "id": 1,
+    "folio": "2539360020030",
+    "address": "12496 NW 25 ST",
+    "lat": 25.793785,
+    "lng": -80.393934,
+    "owner": "PROLOGIS EXCHANGE FL 2001 LLC",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 101634,
+    "buildingHeatedSqFt": 101634,
+    "yearBuilt": 2007,
+    "ownerMailingState": "CO",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T15:32:59.070Z"
+  },
+  {
+    "id": 2,
+    "folio": "3020120270010",
+    "address": "17100 NW 59 AVE",
+    "lat": 25.929628,
+    "lng": -80.298772,
+    "owner": "MIAMI DADE 17100 LLC",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 116486,
+    "buildingHeatedSqFt": 116486,
+    "yearBuilt": 1995,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
+  },
+  {
+    "id": 3,
     "folio": "3030060010143",
     "address": "9700 NW 112 AVE",
     "lat": 25.863503,
@@ -13,10 +45,10 @@
     "yearBuilt": 2000,
     "ownerMailingState": "CO",
     "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
-    "fetchedAt": "2026-03-18T14:50:55.956Z"
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
   },
   {
-    "id": 2,
+    "id": 4,
     "folio": "3030350080020",
     "address": "7205 NW 19 ST",
     "lat": 25.7916,
@@ -29,10 +61,106 @@
     "yearBuilt": 1981,
     "ownerMailingState": "FL",
     "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
-    "fetchedAt": "2026-03-18T14:50:55.956Z"
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
   },
   {
-    "id": 3,
+    "id": 5,
+    "folio": "3030520020070",
+    "address": "7270 NW 12 ST",
+    "lat": 25.781849,
+    "lng": -80.314222,
+    "owner": "ZEREP TOWERS LLC",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 115193,
+    "buildingHeatedSqFt": 115193,
+    "yearBuilt": 1981,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
+  },
+  {
+    "id": 6,
+    "folio": "3040100000032",
+    "address": "7801 CORAL WAY",
+    "lat": 25.749637,
+    "lng": -80.321315,
+    "owner": "PALMETTO OFFICE PARK INC",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 79360,
+    "buildingHeatedSqFt": 79360,
+    "yearBuilt": 1972,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
+  },
+  {
+    "id": 7,
+    "folio": "3040171280010",
+    "address": "2760 SW 97 AVE",
+    "lat": 25.743946,
+    "lng": -80.351937,
+    "owner": "MYA PROPERTIES LLC",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 63492,
+    "buildingHeatedSqFt": 63492,
+    "yearBuilt": 2001,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
+  },
+  {
+    "id": 8,
+    "folio": "3220220050060",
+    "address": "7801 NW 146 ST",
+    "lat": 25.90706,
+    "lng": -80.327444,
+    "owner": "THE GRAHAM COMPANIES",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 62764,
+    "buildingHeatedSqFt": 60436,
+    "yearBuilt": 1991,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
+  },
+  {
+    "id": 9,
+    "folio": "3220220380020",
+    "address": "7745 NW 148 ST",
+    "lat": 25.908222,
+    "lng": -80.325997,
+    "owner": "TGC OAKLANE LLC",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 53392,
+    "buildingHeatedSqFt": 28456,
+    "yearBuilt": 1997,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
+  },
+  {
+    "id": 10,
+    "folio": "3421110170010",
+    "address": "1515 NW 167 ST",
+    "lat": 25.927836,
+    "lng": -80.226567,
+    "owner": "CHABAD OF MID MIAMI BEACH INC",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 50889,
+    "buildingHeatedSqFt": 50889,
+    "yearBuilt": 1972,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
+  },
+  {
+    "id": 11,
     "folio": "3421110320030",
     "address": "1313 NW 167 ST",
     "lat": 25.929645,
@@ -45,10 +173,10 @@
     "yearBuilt": 1993,
     "ownerMailingState": "FL",
     "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
-    "fetchedAt": "2026-03-18T14:50:55.956Z"
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
   },
   {
-    "id": 4,
+    "id": 12,
     "folio": "3660050750010",
     "address": "19500 S DIXIE HWY",
     "lat": 25.587218,
@@ -61,6 +189,6 @@
     "yearBuilt": 1993,
     "ownerMailingState": "NY",
     "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
-    "fetchedAt": "2026-03-18T14:50:55.956Z"
+    "fetchedAt": "2026-03-18T15:32:59.071Z"
   }
 ]

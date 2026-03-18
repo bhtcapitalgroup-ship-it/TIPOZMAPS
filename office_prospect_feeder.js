@@ -3,12 +3,13 @@
  * office_prospect_feeder.js — Bulk Feeder: Large Office Complexes
  *
  * Queries the Miami-Dade County GIS (MD_LandInformation MapServer,
- * Layer 26 — Parcels) for properties that meet our conversion criteria:
- *   - DOR code 17xx (Office buildings)
- *   - Building actual area >= 120,000 sq ft
+ * Layer 26 — Parcels) for ALL office properties >= 50,000 sq ft.
+ *
+ * Paginates through the ArcGIS REST API using resultOffset since the
+ * server caps responses at ~1000 records per request.
  *
  * Saves results with centroid coordinates to output/raw_office_prospects.json
- * so they can be piped through the Phase 2 zone matcher.
+ * so they can be piped through the full analysis pipeline.
  */
 
 const axios = require("axios");
@@ -20,8 +21,10 @@ const PARCEL_ENDPOINT =
 
 const OUTPUT_PATH = path.join(__dirname, "output", "raw_office_prospects.json");
 
-const MIN_SQFT = 120000;
-const MAX_RESULTS = 50;
+const MIN_SQFT = 50000;
+const PAGE_SIZE = 1000;
+
+const WHERE_CLAUSE = `DOR_CODE_CUR LIKE '17%' AND BUILDING_ACTUAL_AREA >= ${MIN_SQFT}`;
 
 const TARGET_FIELDS = [
   "FOLIO",
@@ -39,16 +42,12 @@ const TARGET_FIELDS = [
 // Centroid computation from polygon rings
 // ---------------------------------------------------------------------------
 
-/**
- * Compute the centroid of a polygon by averaging all vertices in the
- * outer ring. Good enough for parcel-level accuracy.
- */
 function computeCentroid(geometry) {
   if (!geometry || !geometry.rings || geometry.rings.length === 0) {
     return null;
   }
 
-  const ring = geometry.rings[0]; // outer ring
+  const ring = geometry.rings[0];
   let sumLng = 0;
   let sumLat = 0;
 
@@ -64,30 +63,64 @@ function computeCentroid(geometry) {
 }
 
 // ---------------------------------------------------------------------------
-// Query the county GIS
+// Paginated query
 // ---------------------------------------------------------------------------
 
-async function fetchOfficeProspects() {
-  console.log("Querying Miami-Dade County GIS for large office complexes...");
-  console.log(`  Filter: DOR_CODE_CUR LIKE '17%' AND BUILDING_ACTUAL_AREA >= ${MIN_SQFT.toLocaleString()}`);
-  console.log(`  Max results: ${MAX_RESULTS}\n`);
+async function fetchAllOfficeProspects() {
+  console.log("Querying Miami-Dade County GIS for office complexes >= 50,000 sq ft...");
+  console.log(`  WHERE: ${WHERE_CLAUSE}`);
+  console.log(`  Page size: ${PAGE_SIZE} (will paginate until exhausted)\n`);
 
-  const params = {
-    where: `DOR_CODE_CUR LIKE '17%' AND BUILDING_ACTUAL_AREA >= ${MIN_SQFT}`,
-    outFields: TARGET_FIELDS,
-    returnGeometry: true,
-    outSR: 4326,
-    resultRecordCount: MAX_RESULTS,
-    f: "json",
-  };
+  const allFeatures = [];
+  let offset = 0;
+  let page = 1;
 
-  const res = await axios.get(PARCEL_ENDPOINT, { params, timeout: 30000 });
+  while (true) {
+    const params = {
+      where: WHERE_CLAUSE,
+      outFields: TARGET_FIELDS,
+      returnGeometry: true,
+      outSR: 4326,
+      resultRecordCount: PAGE_SIZE,
+      resultOffset: offset,
+      f: "json",
+    };
 
-  if (!res.data || !res.data.features) {
-    throw new Error("Unexpected API response — no features array");
+    console.log(`  Page ${page}: fetching records ${offset}–${offset + PAGE_SIZE - 1}...`);
+
+    const res = await axios.get(PARCEL_ENDPOINT, { params, timeout: 60000 });
+
+    if (!res.data || !res.data.features) {
+      throw new Error(`Unexpected API response on page ${page} — no features array`);
+    }
+
+    const features = res.data.features;
+    console.log(`  Page ${page}: received ${features.length} records.`);
+
+    if (features.length === 0) {
+      break;
+    }
+
+    allFeatures.push(...features);
+    offset += features.length;
+    page++;
+
+    // If we got fewer than PAGE_SIZE, we've reached the end
+    if (features.length < PAGE_SIZE) {
+      break;
+    }
+
+    // Brief pause between pages to be respectful to the server
+    await new Promise((r) => setTimeout(r, 1000));
   }
 
-  return res.data.features;
+  console.log(`\n  Pagination complete: ${allFeatures.length} total records across ${page - 1} page(s).\n`);
+  return allFeatures;
+}
+
+// Legacy single-page fetch (kept for backward compat with master pipeline import)
+async function fetchOfficeProspects() {
+  return fetchAllOfficeProspects();
 }
 
 // ---------------------------------------------------------------------------
@@ -121,24 +154,34 @@ function transformFeature(feature, index) {
 // ---------------------------------------------------------------------------
 
 async function main() {
-  console.log("=== TIPOZMAPS — Bulk Feeder: Large Office Complexes ===\n");
+  console.log("=== TIPOZMAPS — Bulk Feeder: Office Complexes >= 50,000 sq ft ===\n");
 
-  const features = await fetchOfficeProspects();
-  console.log(`API returned ${features.length} parcels.\n`);
-
+  const features = await fetchAllOfficeProspects();
   const prospects = features.map(transformFeature);
 
-  // Print summary table
-  console.log("--- PROSPECTS ---\n");
-  for (const p of prospects) {
+  // Print summary (compact for large datasets)
+  console.log("--- PROSPECTS (top 10 by building size) ---\n");
+  const sorted = [...prospects].sort((a, b) => b.buildingSqFt - a.buildingSqFt);
+  for (const p of sorted.slice(0, 10)) {
     const outOfState = p.ownerMailingState && p.ownerMailingState !== "FL" ? ` [OUT-OF-STATE: ${p.ownerMailingState}]` : "";
-    console.log(`[${p.id}] ${p.address}`);
-    console.log(`     Folio: ${p.folio}  |  Owner: ${p.owner}${outOfState}`);
-    console.log(`     DOR: ${p.dorCode} (${p.dorDescription})`);
-    console.log(`     Building: ${p.buildingSqFt.toLocaleString()} sq ft  |  Heated: ${p.buildingHeatedSqFt.toLocaleString()} sq ft  |  Built: ${p.yearBuilt || "N/A"}`);
-    console.log(`     Coords: ${p.lat}, ${p.lng}`);
-    console.log();
+    console.log(`[${p.id}] ${p.address}  |  ${p.buildingSqFt.toLocaleString()} sq ft  |  ${p.owner}${outOfState}`);
   }
+  if (prospects.length > 10) {
+    console.log(`  ... and ${prospects.length - 10} more.\n`);
+  }
+
+  // Stats
+  const outOfStateCount = prospects.filter((p) => p.ownerMailingState && p.ownerMailingState !== "FL" && p.ownerMailingState !== "").length;
+  const avgSqFt = Math.round(prospects.reduce((s, p) => s + p.buildingSqFt, 0) / prospects.length);
+  const over100k = prospects.filter((p) => p.buildingSqFt >= 100000).length;
+  const over120k = prospects.filter((p) => p.buildingSqFt >= 120000).length;
+
+  console.log("--- STATISTICS ---\n");
+  console.log(`  Total properties fetched:  ${prospects.length}`);
+  console.log(`  Average building size:     ${avgSqFt.toLocaleString()} sq ft`);
+  console.log(`  >= 100,000 sq ft:          ${over100k}`);
+  console.log(`  >= 120,000 sq ft:          ${over120k} (Phase 4 conversion threshold)`);
+  console.log(`  Out-of-state owners:       ${outOfStateCount}`);
 
   // Save to output
   if (!fs.existsSync(path.dirname(OUTPUT_PATH))) {
@@ -146,11 +189,9 @@ async function main() {
   }
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(prospects, null, 2), "utf-8");
 
-  console.log(`--- SAVED ${prospects.length} prospects to ${OUTPUT_PATH} ---\n`);
-  console.log("NEXT STEP: Run these prospects through the zone matcher (Phase 2):");
-  console.log("  node property_matcher.js --input output/raw_office_prospects.json");
-  console.log("\nThis will tag each prospect with CRA/TIF and Opportunity Zone overlays,");
-  console.log("then feed into distress_analyzer.js (Phase 3) and conversion_evaluator.js (Phase 4).");
+  console.log(`\n=== SAVED ${prospects.length} office prospects to ${OUTPUT_PATH} ===\n`);
+  console.log("NEXT STEP: Run the master pipeline to process all prospects:");
+  console.log("  node run_master_pipeline.js");
 }
 
 if (require.main === module) {
@@ -160,4 +201,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { fetchOfficeProspects, transformFeature, computeCentroid };
+module.exports = { fetchOfficeProspects, fetchAllOfficeProspects, transformFeature, computeCentroid };
