@@ -2,17 +2,16 @@
 /**
  * run_master_pipeline.js — Master Pipeline Controller
  *
- * Orchestrates all 4 phases end-to-end in a single run:
+ * Orchestrates all phases end-to-end in a single run:
  *
- *   Phase 1: Fetch office prospects from Miami-Dade County GIS
- *            (or read existing raw_office_prospects.json)
- *   Phase 2: Point-in-polygon zone matching (CRA/TIF + Opportunity Zones)
- *   Phase 3: Distress scoring (out-of-state owner, tax delinquency, violations)
- *   Phase 4: Office-to-residential conversion feasibility filter
+ *   Phase 1:   Fetch office prospects from Miami-Dade County GIS
+ *              (or read existing raw_office_prospects.json)
+ *   Phase 2:   Point-in-polygon zone matching (CRA/TIF + Opportunity Zones)
+ *   Phase 2.5: Tax Collector scraper (Playwright stealth) for delinquency data
+ *   Phase 3:   Distress scoring (tax delinquent, out-of-state owner, violations)
+ *   Phase 4:   Office-to-residential conversion feasibility filter
  *
  * All data flows in-memory — no redundant API calls between phases.
- * The bulk feeder already provides DOR code, building sqft, and owner
- * mailing state, so we skip the per-property county API enrichment.
  */
 
 const fs = require("fs");
@@ -23,6 +22,7 @@ const { loadZones, matchProperties } = require("./property_matcher");
 const { classifyDorCode } = require("./miami_public_data");
 const { scoreProperty, MOTIVATED_THRESHOLD } = require("./distress_analyzer");
 const { evaluateConversion, MIN_SQFT, TARGET_UNITS, AVG_UNIT_SQFT } = require("./conversion_evaluator");
+const { checkTaxDelinquencyBatch } = require("./tax_collector_scraper");
 
 const OUTPUT_DIR = path.join(__dirname, "output");
 const RAW_PROSPECTS_PATH = path.join(OUTPUT_DIR, "raw_office_prospects.json");
@@ -33,14 +33,12 @@ const ULTIMATE_OUTPUT_PATH = path.join(OUTPUT_DIR, "ultimate_unicorns.json");
 // ---------------------------------------------------------------------------
 
 async function runPhase1() {
-  // Check for existing fetched data first to avoid unnecessary API calls
   if (fs.existsSync(RAW_PROSPECTS_PATH)) {
     const prospects = JSON.parse(fs.readFileSync(RAW_PROSPECTS_PATH, "utf-8"));
     console.log(`   Loaded ${prospects.length} cached prospects from ${RAW_PROSPECTS_PATH}`);
     return prospects;
   }
 
-  // No cache — run the feeder live
   console.log("   No cached data found. Fetching from county GIS...");
   const { fetchOfficeProspects, transformFeature } = require("./office_prospect_feeder");
   const features = await fetchOfficeProspects();
@@ -63,10 +61,26 @@ function runPhase2(prospects) {
   const inZone = matched.filter((p) => p.insideCRA || p.insideOZ);
 
   console.log(`   ${inZone.length}/${matched.length} properties fall inside at least one zone.`);
-
-  // Return ALL properties (even those outside zones) so Phase 3 can score them.
-  // Out-of-state owners outside incentive zones are still interesting leads.
   return matched;
+}
+
+// ---------------------------------------------------------------------------
+// Phase 2.5: Tax Collector scraper
+// ---------------------------------------------------------------------------
+
+async function runPhase2_5(properties) {
+  console.log(`   Launching Playwright stealth browser...`);
+  const enriched = await checkTaxDelinquencyBatch(properties);
+
+  const delinquent = enriched.filter((p) => p.taxStatus && p.taxStatus.taxDelinquent);
+  const scraped = enriched.filter((p) => p.taxStatus && p.taxStatus.source === "scraped");
+  const fallback = enriched.filter((p) => p.taxStatus && p.taxStatus.source === "simulated-fallback");
+
+  console.log(`   ${delinquent.length}/${enriched.length} flagged as tax delinquent.`);
+  if (scraped.length > 0) console.log(`   ${scraped.length} from live scrape.`);
+  if (fallback.length > 0) console.log(`   ${fallback.length} from simulated fallback (site blocked or DOM changed).`);
+
+  return enriched;
 }
 
 // ---------------------------------------------------------------------------
@@ -74,24 +88,22 @@ function runPhase2(prospects) {
 // ---------------------------------------------------------------------------
 
 function runPhase3(properties) {
-  // The bulk feeder already provides ownerMailingState, so we can derive
-  // publicRecords without hitting the county API again.
   const enriched = properties.map((p) => {
-    // If publicRecords already exists (e.g., from standalone run), keep it
-    if (p.publicRecords) return p;
-
     const ownerMailingState = (p.ownerMailingState || "").trim().toUpperCase();
     const outOfStateOwner = ownerMailingState !== "" && ownerMailingState !== "FL";
 
     const dorCode = p.dorCode || "";
     const propertyUse = classifyDorCode(dorCode);
 
+    // Merge tax data from Phase 2.5 with owner/property data
+    const existingRecords = p.publicRecords || {};
+
     return {
       ...p,
       publicRecords: {
-        // TODO: Wire a separate Tax Collector scraper for tax delinquency data.
-        taxDelinquent: false,
-        codeViolations: 0,
+        taxDelinquent: existingRecords.taxDelinquent || false,
+        taxDue: existingRecords.taxDue || 0,
+        codeViolations: existingRecords.codeViolations || 0,
         outOfStateOwner,
       },
       physicalAttributes: {
@@ -135,7 +147,6 @@ function printSummaryTable(allScored, unicorns) {
     return;
   }
 
-  // Print all properties with their full journey
   for (const p of allScored) {
     const zoneFlags = [];
     if (p.insideCRA) zoneFlags.push(`CRA: ${p.zones.cra.name.trim()}`);
@@ -143,14 +154,19 @@ function printSummaryTable(allScored, unicorns) {
     const zoneStr = zoneFlags.length > 0 ? zoneFlags.join(" + ") : "None";
 
     const ca = p.conversionAnalysis;
-    const convStatus = ca
-      ? (ca.feasible ? "UNICORN" : "FAIL")
+    const convStatus = ca ? (ca.feasible ? "UNICORN" : "FAIL") : "N/A";
+
+    const taxStr = p.taxStatus
+      ? (p.taxStatus.taxDelinquent
+        ? `DELINQUENT $${p.taxStatus.taxDue.toLocaleString()} (${p.taxStatus.source})`
+        : `Current (${p.taxStatus.source})`)
       : "N/A";
 
     console.log(`[${p.id}] ${p.address || "N/A"}`);
     console.log(`     Owner:     ${p.owner || "N/A"}  |  State: ${p.ownerMailingState || "N/A"}`);
     console.log(`     Building:  ${(p.buildingSqFt || 0).toLocaleString()} sq ft  |  DOR: ${p.dorCode || "N/A"} (${p.dorDescription || "N/A"})`);
     console.log(`     Zones:     ${zoneStr}`);
+    console.log(`     Tax:       ${taxStr}`);
     console.log(`     Distress:  ${p.distressScore}/6  [${p.sellerTier}]  ${p.distressSignals.length ? "=> " + p.distressSignals.join(", ") : ""}`);
     if (ca) {
       console.log(`     Conversion: [${convStatus}] ${ca.reasons.join("; ")}`);
@@ -161,16 +177,18 @@ function printSummaryTable(allScored, unicorns) {
     console.log();
   }
 
-  // Final unicorn highlight
   console.log("============================================================");
   if (unicorns.length > 0) {
-    console.log(`  ULTIMATE UNICORNS: ${unicorns.length} properties survived all 4 phases`);
+    console.log(`  ULTIMATE UNICORNS: ${unicorns.length} properties survived all phases`);
     console.log("============================================================\n");
     for (const u of unicorns) {
       const ca = u.conversionAnalysis;
+      const taxLabel = u.taxStatus && u.taxStatus.taxDelinquent
+        ? `TAX DELINQUENT $${u.taxStatus.taxDue.toLocaleString()}`
+        : "Tax current";
       console.log(`  >> ${u.address} (Folio: ${u.folio || "N/A"})`);
       console.log(`     ${(u.buildingSqFt || 0).toLocaleString()} sq ft Office  |  ~${ca.potentialUnits} potential units`);
-      console.log(`     Owner: ${u.owner || "N/A"} (${u.ownerMailingState || "N/A"})  |  Distress: ${u.distressScore}/6`);
+      console.log(`     Owner: ${u.owner || "N/A"} (${u.ownerMailingState || "N/A"})  |  Distress: ${u.distressScore}/6  |  ${taxLabel}`);
       const zf = [];
       if (u.insideCRA) zf.push(`CRA: ${u.zones.cra.name.trim()}`);
       if (u.insideOZ) zf.push(`OZ: ${u.zones.opportunityZone.tract}`);
@@ -178,12 +196,11 @@ function printSummaryTable(allScored, unicorns) {
       console.log();
     }
   } else {
-    console.log("  NO ULTIMATE UNICORNS — no properties survived all 4 filters.");
+    console.log("  NO ULTIMATE UNICORNS — no properties survived all filters.");
     console.log("============================================================\n");
-    console.log("  This is expected with strict criteria. Consider:");
+    console.log("  Consider:");
     console.log("  - Lowering the sq ft threshold");
-    console.log("  - Expanding DOR codes (e.g., include multi-story office 17xx)");
-    console.log("  - Wiring the Tax Collector scraper to unlock +3 distress points");
+    console.log("  - Expanding DOR codes beyond 17xx");
     console.log("  - Running against a wider geographic area\n");
   }
 }
@@ -209,14 +226,17 @@ async function main() {
   const zoneMatched = runPhase2(prospects);
   console.log();
 
-  // Phase 3: Distress score
-  console.log("[PHASE 3] Distress Scoring Engine");
-  const { all: allScored, motivated } = runPhase3(zoneMatched);
+  // Phase 2.5: Tax delinquency check
+  console.log("[PHASE 2.5] Tax Collector Scraper (Playwright Stealth)");
+  const taxChecked = await runPhase2_5(zoneMatched);
   console.log();
 
-  // Phase 4: Conversion filter — run on ALL scored properties, not just motivated
-  // A property might not be "distressed" but still be a conversion unicorn
-  // However, per the pipeline spec, we filter motivated sellers first
+  // Phase 3: Distress score (now includes tax delinquency from Phase 2.5)
+  console.log("[PHASE 3] Distress Scoring Engine");
+  const { all: allScored, motivated } = runPhase3(taxChecked);
+  console.log();
+
+  // Phase 4: Conversion filter
   console.log("[PHASE 4] Office-to-Resi Conversion Filter");
   const phase4Input = motivated.length > 0 ? motivated : allScored;
   const inputLabel = motivated.length > 0 ? "motivated sellers" : "all scored (no motivated sellers found)";
@@ -236,11 +256,12 @@ async function main() {
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
 
   console.log("--- PIPELINE STATS ---\n");
-  console.log(`  Phase 1 — Raw prospects:     ${prospects.length}`);
-  console.log(`  Phase 2 — Zone matched:      ${zoneMatched.filter((p) => p.insideCRA || p.insideOZ).length}/${zoneMatched.length}`);
-  console.log(`  Phase 3 — Highly Motivated:  ${motivated.length}/${allScored.length}`);
-  console.log(`  Phase 4 — Unicorns:          ${unicorns.length}/${allEvaluated.length}`);
-  console.log(`  Elapsed:                     ${elapsed}s`);
+  console.log(`  Phase 1   — Raw prospects:     ${prospects.length}`);
+  console.log(`  Phase 2   — Zone matched:      ${zoneMatched.filter((p) => p.insideCRA || p.insideOZ).length}/${zoneMatched.length}`);
+  console.log(`  Phase 2.5 — Tax delinquent:    ${taxChecked.filter((p) => p.taxStatus && p.taxStatus.taxDelinquent).length}/${taxChecked.length}`);
+  console.log(`  Phase 3   — Highly Motivated:  ${motivated.length}/${allScored.length}`);
+  console.log(`  Phase 4   — Unicorns:          ${unicorns.length}/${allEvaluated.length}`);
+  console.log(`  Elapsed:                       ${elapsed}s`);
   console.log(`\n  Final output: ${ULTIMATE_OUTPUT_PATH}`);
 }
 

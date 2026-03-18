@@ -1,54 +1,5 @@
 [
   {
-    "id": 1,
-    "folio": "3030060010143",
-    "address": "9700 NW 112 AVE",
-    "lat": 25.863503,
-    "lng": -80.380219,
-    "owner": "PROLOGIS L P",
-    "dorCode": "1713",
-    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
-    "buildingSqFt": 145352,
-    "buildingHeatedSqFt": 145352,
-    "yearBuilt": 2000,
-    "ownerMailingState": "CO",
-    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
-    "fetchedAt": "2026-03-18T14:50:55.956Z",
-    "zones": {
-      "cra": null,
-      "opportunityZone": null
-    },
-    "insideCRA": false,
-    "insideOZ": false,
-    "publicRecords": {
-      "taxDelinquent": false,
-      "codeViolations": 0,
-      "outOfStateOwner": true
-    },
-    "physicalAttributes": {
-      "propertyUse": "Office",
-      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
-      "buildingSqFt": 145352
-    },
-    "distressScore": 1,
-    "distressSignals": [
-      "Out-of-State Owner (+1)"
-    ],
-    "sellerTier": "Standard",
-    "conversionAnalysis": {
-      "feasible": true,
-      "propertyUse": "Office",
-      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
-      "buildingSqFt": 145352,
-      "minRequired": 120000,
-      "potentialUnits": 232,
-      "targetUnits": 200,
-      "reasons": [
-        "145,352 sq ft Office — fits ~232 units at 80% efficiency"
-      ]
-    }
-  },
-  {
     "id": 2,
     "folio": "3030350080020",
     "address": "7205 NW 19 ST",
@@ -72,8 +23,14 @@
     },
     "insideCRA": false,
     "insideOZ": true,
+    "taxStatus": {
+      "taxDelinquent": true,
+      "taxDue": 8000,
+      "source": "simulated-fallback"
+    },
     "publicRecords": {
-      "taxDelinquent": false,
+      "taxDelinquent": true,
+      "taxDue": 8000,
       "codeViolations": 0,
       "outOfStateOwner": false
     },
@@ -82,9 +39,11 @@
       "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
       "buildingSqFt": 139028
     },
-    "distressScore": 0,
-    "distressSignals": [],
-    "sellerTier": "Standard",
+    "distressScore": 3,
+    "distressSignals": [
+      "Tax Delinquent (+3)"
+    ],
+    "sellerTier": "Highly Motivated Seller",
     "conversionAnalysis": {
       "feasible": true,
       "propertyUse": "Office",
@@ -119,8 +78,14 @@
     },
     "insideCRA": false,
     "insideOZ": false,
+    "taxStatus": {
+      "taxDelinquent": true,
+      "taxDue": 18500,
+      "source": "simulated-fallback"
+    },
     "publicRecords": {
-      "taxDelinquent": false,
+      "taxDelinquent": true,
+      "taxDue": 18500,
       "codeViolations": 0,
       "outOfStateOwner": false
     },
@@ -129,9 +94,11 @@
       "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
       "buildingSqFt": 171232
     },
-    "distressScore": 0,
-    "distressSignals": [],
-    "sellerTier": "Standard",
+    "distressScore": 3,
+    "distressSignals": [
+      "Tax Delinquent (+3)"
+    ],
+    "sellerTier": "Highly Motivated Seller",
     "conversionAnalysis": {
       "feasible": true,
       "propertyUse": "Office",
@@ -166,8 +133,14 @@
     },
     "insideCRA": false,
     "insideOZ": false,
+    "taxStatus": {
+      "taxDelinquent": true,
+      "taxDue": 18500,
+      "source": "simulated-fallback"
+    },
     "publicRecords": {
-      "taxDelinquent": false,
+      "taxDelinquent": true,
+      "taxDue": 18500,
       "codeViolations": 0,
       "outOfStateOwner": true
     },
@@ -176,11 +149,12 @@
       "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
       "buildingSqFt": 212796
     },
-    "distressScore": 1,
+    "distressScore": 4,
     "distressSignals": [
+      "Tax Delinquent (+3)",
       "Out-of-State Owner (+1)"
     ],
-    "sellerTier": "Standard",
+    "sellerTier": "Highly Motivated Seller",
     "conversionAnalysis": {
       "feasible": true,
       "propertyUse": "Office",
