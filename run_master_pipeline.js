@@ -25,7 +25,7 @@ const { evaluateConversion, MIN_SQFT, TARGET_UNITS, AVG_UNIT_SQFT } = require(".
 const { checkTaxDelinquencyBatch } = require("./tax_collector_scraper");
 
 const OUTPUT_DIR = path.join(__dirname, "output");
-const RAW_PROSPECTS_PATH = path.join(OUTPUT_DIR, "raw_office_prospects.json");
+const RAW_PROSPECTS_PATH = path.join(OUTPUT_DIR, "raw_massive_prospects.json");
 const ULTIMATE_OUTPUT_PATH = path.join(OUTPUT_DIR, "ultimate_unicorns.json");
 
 // ---------------------------------------------------------------------------

@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 /**
- * office_prospect_feeder.js — Bulk Feeder: Large Office Complexes
+ * office_prospect_feeder.js — Bulk Feeder: Large Commercial & Multi-Family
  *
  * Queries the Miami-Dade County GIS (MD_LandInformation MapServer,
- * Layer 26 — Parcels) for ALL office properties >= 50,000 sq ft.
+ * Layer 26 — Parcels) for ALL large buildings >= 50,000 sq ft that
+ * could be converted to residential or are already multi-family.
  *
- * Paginates through the ArcGIS REST API using resultOffset since the
- * server caps responses at ~1000 records per request.
+ * Includes: Multi-Family (03), Retail/Shopping (11-29), Hotels (39),
+ * Industrial/Warehouses (41-49), Institutional (71-73), Office (17).
+ * Excludes: Single-Family (01, 02) and Vacant Land (00).
  *
- * Saves results with centroid coordinates to output/raw_office_prospects.json
- * so they can be piped through the full analysis pipeline.
+ * Paginates through the ArcGIS REST API using resultOffset.
  */
 
 const axios = require("axios");
@@ -19,12 +20,16 @@ const path = require("path");
 const PARCEL_ENDPOINT =
   "https://gisweb.miamidade.gov/arcgis/rest/services/MD_LandInformation/MapServer/26/query";
 
-const OUTPUT_PATH = path.join(__dirname, "output", "raw_office_prospects.json");
+const OUTPUT_PATH = path.join(__dirname, "output", "raw_massive_prospects.json");
 
 const MIN_SQFT = 50000;
 const PAGE_SIZE = 1000;
 
-const WHERE_CLAUSE = `DOR_CODE_CUR LIKE '17%' AND BUILDING_ACTUAL_AREA >= ${MIN_SQFT}`;
+// Exclude single-family residential (01xx, 02xx) and vacant land (00xx).
+// The 2-char prefix NOT IN catches all sub-codes (e.g., 0101, 0102, etc.)
+const WHERE_CLAUSE =
+  `BUILDING_ACTUAL_AREA >= ${MIN_SQFT}` +
+  ` AND SUBSTRING(DOR_CODE_CUR, 1, 2) NOT IN ('00','01','02')`;
 
 const TARGET_FIELDS = [
   "FOLIO",
@@ -66,8 +71,8 @@ function computeCentroid(geometry) {
 // Paginated query
 // ---------------------------------------------------------------------------
 
-async function fetchAllOfficeProspects() {
-  console.log("Querying Miami-Dade County GIS for office complexes >= 50,000 sq ft...");
+async function fetchAllProspects() {
+  console.log("Querying Miami-Dade County GIS for large commercial & multi-family buildings...");
   console.log(`  WHERE: ${WHERE_CLAUSE}`);
   console.log(`  Page size: ${PAGE_SIZE} (will paginate until exhausted)\n`);
 
@@ -105,7 +110,6 @@ async function fetchAllOfficeProspects() {
     offset += features.length;
     page++;
 
-    // If we got fewer than PAGE_SIZE, we've reached the end
     if (features.length < PAGE_SIZE) {
       break;
     }
@@ -118,9 +122,9 @@ async function fetchAllOfficeProspects() {
   return allFeatures;
 }
 
-// Legacy single-page fetch (kept for backward compat with master pipeline import)
+// Backward-compat alias
 async function fetchOfficeProspects() {
-  return fetchAllOfficeProspects();
+  return fetchAllProspects();
 }
 
 // ---------------------------------------------------------------------------
@@ -154,33 +158,47 @@ function transformFeature(feature, index) {
 // ---------------------------------------------------------------------------
 
 async function main() {
-  console.log("=== TIPOZMAPS — Bulk Feeder: Office Complexes >= 50,000 sq ft ===\n");
+  console.log("=== TIPOZMAPS — Bulk Feeder: All Large Commercial & Multi-Family >= 50,000 sq ft ===\n");
 
-  const features = await fetchAllOfficeProspects();
+  const features = await fetchAllProspects();
   const prospects = features.map(transformFeature);
 
-  // Print summary (compact for large datasets)
-  console.log("--- PROSPECTS (top 10 by building size) ---\n");
+  // Print top 15 by building size
+  console.log("--- TOP 15 PROSPECTS BY SIZE ---\n");
   const sorted = [...prospects].sort((a, b) => b.buildingSqFt - a.buildingSqFt);
-  for (const p of sorted.slice(0, 10)) {
-    const outOfState = p.ownerMailingState && p.ownerMailingState !== "FL" ? ` [OUT-OF-STATE: ${p.ownerMailingState}]` : "";
-    console.log(`[${p.id}] ${p.address}  |  ${p.buildingSqFt.toLocaleString()} sq ft  |  ${p.owner}${outOfState}`);
+  for (const p of sorted.slice(0, 15)) {
+    const outOfState = p.ownerMailingState && p.ownerMailingState !== "FL" ? ` [${p.ownerMailingState}]` : "";
+    console.log(`[${p.id}] ${p.address}  |  ${p.buildingSqFt.toLocaleString()} sq ft  |  ${p.dorCode} ${p.dorDescription.split(" : ")[0]}  |  ${p.owner}${outOfState}`);
   }
-  if (prospects.length > 10) {
-    console.log(`  ... and ${prospects.length - 10} more.\n`);
+  if (prospects.length > 15) {
+    console.log(`  ... and ${prospects.length - 15} more.\n`);
   }
+
+  // Breakdown by property type
+  const byType = {};
+  for (const p of prospects) {
+    const prefix = p.dorCode ? p.dorCode.substring(0, 2) : "??";
+    const label = p.dorDescription.split(" : ").pop() || prefix;
+    const key = `${prefix} - ${label}`;
+    byType[key] = (byType[key] || 0) + 1;
+  }
+
+  console.log("--- BREAKDOWN BY PROPERTY TYPE ---\n");
+  Object.entries(byType)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([type, count]) => console.log(`  ${type}: ${count}`));
 
   // Stats
   const outOfStateCount = prospects.filter((p) => p.ownerMailingState && p.ownerMailingState !== "FL" && p.ownerMailingState !== "").length;
-  const avgSqFt = Math.round(prospects.reduce((s, p) => s + p.buildingSqFt, 0) / prospects.length);
+  const avgSqFt = prospects.length > 0 ? Math.round(prospects.reduce((s, p) => s + p.buildingSqFt, 0) / prospects.length) : 0;
   const over100k = prospects.filter((p) => p.buildingSqFt >= 100000).length;
   const over120k = prospects.filter((p) => p.buildingSqFt >= 120000).length;
 
-  console.log("--- STATISTICS ---\n");
+  console.log("\n--- STATISTICS ---\n");
   console.log(`  Total properties fetched:  ${prospects.length}`);
   console.log(`  Average building size:     ${avgSqFt.toLocaleString()} sq ft`);
   console.log(`  >= 100,000 sq ft:          ${over100k}`);
-  console.log(`  >= 120,000 sq ft:          ${over120k} (Phase 4 conversion threshold)`);
+  console.log(`  >= 120,000 sq ft:          ${over120k}`);
   console.log(`  Out-of-state owners:       ${outOfStateCount}`);
 
   // Save to output
@@ -189,7 +207,7 @@ async function main() {
   }
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(prospects, null, 2), "utf-8");
 
-  console.log(`\n=== SAVED ${prospects.length} office prospects to ${OUTPUT_PATH} ===\n`);
+  console.log(`\n=== TOTAL: ${prospects.length} properties saved to ${OUTPUT_PATH} ===\n`);
   console.log("NEXT STEP: Run the master pipeline to process all prospects:");
   console.log("  node run_master_pipeline.js");
 }
@@ -201,4 +219,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { fetchOfficeProspects, fetchAllOfficeProspects, transformFeature, computeCentroid };
+module.exports = { fetchOfficeProspects, fetchAllProspects, transformFeature, computeCentroid };
