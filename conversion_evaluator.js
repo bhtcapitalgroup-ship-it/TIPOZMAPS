@@ -9,8 +9,7 @@
  *   200 units × 500 sq ft + common areas = 120,000 sq ft minimum
  *   Property use must be "Office" (DOR prefix 17xx)
  *
- * Now reads real physicalAttributes attached by miami_public_data.js
- * during the Phase 3 enrichment pipeline.
+ * Can be run standalone or imported by the master pipeline.
  */
 
 const fs = require("fs");
@@ -61,21 +60,18 @@ function evaluateConversion(property) {
 }
 
 // ---------------------------------------------------------------------------
-// Main
+// Standalone CLI
 // ---------------------------------------------------------------------------
 
 function main() {
   console.log("=== TIPOZMAPS — Phase 4: Office-to-Resi Conversion Filter ===\n");
   console.log(`Feasibility threshold: ${MIN_SQFT.toLocaleString()} sq ft (${TARGET_UNITS} units × ${AVG_UNIT_SQFT} sq ft + common areas)\n`);
 
-  // 1. Load targets (already enriched with real county data from Phase 3)
   const targets = JSON.parse(fs.readFileSync(INPUT_PATH, "utf-8"));
   console.log(`Loaded ${targets.length} highly motivated seller properties.\n`);
 
-  // 2. Evaluate each (physicalAttributes already attached by miami_public_data.js)
   const evaluated = targets.map(evaluateConversion);
 
-  // 3. Print evaluation
   console.log("--- CONVERSION FEASIBILITY ---\n");
   for (const p of evaluated) {
     const ca = p.conversionAnalysis;
@@ -91,9 +87,7 @@ function main() {
     console.log();
   }
 
-  // 4. Filter unicorns and save
   const unicorns = evaluated.filter((p) => p.conversionAnalysis.feasible);
-
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(unicorns, null, 2), "utf-8");
 
   console.log("--- SUMMARY ---\n");
@@ -103,4 +97,8 @@ function main() {
   console.log(`\nSaved to ${OUTPUT_PATH}`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = { evaluateConversion, MIN_SQFT, TARGET_UNITS, AVG_UNIT_SQFT, REQUIRED_USE };

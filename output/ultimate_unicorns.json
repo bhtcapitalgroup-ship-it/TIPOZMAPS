@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "folio": "3030060010143",
+    "address": "9700 NW 112 AVE",
+    "lat": 25.863503,
+    "lng": -80.380219,
+    "owner": "PROLOGIS L P",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 145352,
+    "buildingHeatedSqFt": 145352,
+    "yearBuilt": 2000,
+    "ownerMailingState": "CO",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T14:50:55.956Z",
+    "zones": {
+      "cra": null,
+      "opportunityZone": null
+    },
+    "insideCRA": false,
+    "insideOZ": false,
+    "publicRecords": {
+      "taxDelinquent": false,
+      "codeViolations": 0,
+      "outOfStateOwner": true
+    },
+    "physicalAttributes": {
+      "propertyUse": "Office",
+      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+      "buildingSqFt": 145352
+    },
+    "distressScore": 1,
+    "distressSignals": [
+      "Out-of-State Owner (+1)"
+    ],
+    "sellerTier": "Standard",
+    "conversionAnalysis": {
+      "feasible": true,
+      "propertyUse": "Office",
+      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+      "buildingSqFt": 145352,
+      "minRequired": 120000,
+      "potentialUnits": 232,
+      "targetUnits": 200,
+      "reasons": [
+        "145,352 sq ft Office — fits ~232 units at 80% efficiency"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "folio": "3030350080020",
+    "address": "7205 NW 19 ST",
+    "lat": 25.7916,
+    "lng": -80.315437,
+    "owner": "SPUS7 MIAMI ACC LAND LP",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 139028,
+    "buildingHeatedSqFt": 137477,
+    "yearBuilt": 1981,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T14:50:55.956Z",
+    "zones": {
+      "cra": null,
+      "opportunityZone": {
+        "geoid": "12086009100",
+        "tract": "91"
+      }
+    },
+    "insideCRA": false,
+    "insideOZ": true,
+    "publicRecords": {
+      "taxDelinquent": false,
+      "codeViolations": 0,
+      "outOfStateOwner": false
+    },
+    "physicalAttributes": {
+      "propertyUse": "Office",
+      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+      "buildingSqFt": 139028
+    },
+    "distressScore": 0,
+    "distressSignals": [],
+    "sellerTier": "Standard",
+    "conversionAnalysis": {
+      "feasible": true,
+      "propertyUse": "Office",
+      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+      "buildingSqFt": 139028,
+      "minRequired": 120000,
+      "potentialUnits": 222,
+      "targetUnits": 200,
+      "reasons": [
+        "139,028 sq ft Office — fits ~222 units at 80% efficiency"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "folio": "3421110320030",
+    "address": "1313 NW 167 ST",
+    "lat": 25.929645,
+    "lng": -80.221104,
+    "owner": "MIAMI GARDENS PALMETTO AT",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 171232,
+    "buildingHeatedSqFt": 134246,
+    "yearBuilt": 1993,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T14:50:55.956Z",
+    "zones": {
+      "cra": null,
+      "opportunityZone": null
+    },
+    "insideCRA": false,
+    "insideOZ": false,
+    "publicRecords": {
+      "taxDelinquent": false,
+      "codeViolations": 0,
+      "outOfStateOwner": false
+    },
+    "physicalAttributes": {
+      "propertyUse": "Office",
+      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+      "buildingSqFt": 171232
+    },
+    "distressScore": 0,
+    "distressSignals": [],
+    "sellerTier": "Standard",
+    "conversionAnalysis": {
+      "feasible": true,
+      "propertyUse": "Office",
+      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+      "buildingSqFt": 171232,
+      "minRequired": 120000,
+      "potentialUnits": 273,
+      "targetUnits": 200,
+      "reasons": [
+        "171,232 sq ft Office — fits ~273 units at 80% efficiency"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "folio": "3660050750010",
+    "address": "19500 S DIXIE HWY",
+    "lat": 25.587218,
+    "lng": -80.362282,
+    "owner": "A & E PARTNERS HOLDING LLC",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 212796,
+    "buildingHeatedSqFt": 108940,
+    "yearBuilt": 1993,
+    "ownerMailingState": "NY",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T14:50:55.956Z",
+    "zones": {
+      "cra": null,
+      "opportunityZone": null
+    },
+    "insideCRA": false,
+    "insideOZ": false,
+    "publicRecords": {
+      "taxDelinquent": false,
+      "codeViolations": 0,
+      "outOfStateOwner": true
+    },
+    "physicalAttributes": {
+      "propertyUse": "Office",
+      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+      "buildingSqFt": 212796
+    },
+    "distressScore": 1,
+    "distressSignals": [
+      "Out-of-State Owner (+1)"
+    ],
+    "sellerTier": "Standard",
+    "conversionAnalysis": {
+      "feasible": true,
+      "propertyUse": "Office",
+      "propertyUseRaw": "1713 - OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+      "buildingSqFt": 212796,
+      "minRequired": 120000,
+      "potentialUnits": 340,
+      "targetUnits": 200,
+      "reasons": [
+        "212,796 sq ft Office — fits ~340 units at 80% efficiency"
+      ]
+    }
+  }
+]

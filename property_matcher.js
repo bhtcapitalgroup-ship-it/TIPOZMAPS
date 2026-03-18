@@ -5,6 +5,8 @@
  * Point-in-Polygon analysis using Turf.js.
  * Takes property coordinates and determines which CRA/TIF zones
  * and Opportunity Zones (if any) each property falls within.
+ *
+ * Can be run standalone or imported by the master pipeline.
  */
 
 const fs = require("fs");
@@ -87,74 +89,37 @@ function matchProperties(properties, zones) {
 }
 
 // ---------------------------------------------------------------------------
-// Test data — 5 mock Miami-Dade properties
+// Standalone CLI
 // ---------------------------------------------------------------------------
 
 const MOCK_PROPERTIES = [
-  {
-    id: 1,
-    address: "150 NW 20th St, Miami, FL 33127",
-    lat: 25.7880,
-    lng: -80.1955,
-    units: 12,
-    zoning: "T6-8 Urban Core",
-    notes: "Inside Omni CRA + likely OZ (Overtown area)",
-  },
-  {
-    id: 2,
-    address: "401 NW 1st Pl, Miami, FL 33128",
-    lat: 25.7763,
-    lng: -80.2004,
-    units: 48,
-    zoning: "T6-24a Urban Core",
-    notes: "Downtown / Overtown area — OZ tract 36.01",
-  },
-  {
-    id: 3,
-    address: "12550 NE 7th Ave, North Miami, FL 33161",
-    lat: 25.8967,
-    lng: -80.1714,
-    units: 8,
-    zoning: "RD-15 Residential",
-    notes: "North Miami CRA centroid",
-  },
-  {
-    id: 4,
-    address: "7900 NW 27th Ave, Miami, FL 33147",
-    lat: 25.8470,
-    lng: -80.2316,
-    units: 4,
-    zoning: "T3-R Residential",
-    notes: "NW 79th Street CRA centroid area",
-  },
-  {
-    id: 5,
-    address: "8888 SW 136th St, Miami, FL 33176",
-    lat: 25.6430,
-    lng: -80.3350,
-    units: 1,
-    zoning: "EU-1 Single Family",
-    notes: "Suburban Kendall — should be OUTSIDE all zones",
-  },
+  { id: 1, address: "150 NW 20th St, Miami, FL 33127", lat: 25.7880, lng: -80.1955, units: 12, zoning: "T6-8 Urban Core" },
+  { id: 2, address: "401 NW 1st Pl, Miami, FL 33128", lat: 25.7763, lng: -80.2004, units: 48, zoning: "T6-24a Urban Core" },
+  { id: 3, address: "12550 NE 7th Ave, North Miami, FL 33161", lat: 25.8967, lng: -80.1714, units: 8, zoning: "RD-15 Residential" },
+  { id: 4, address: "7900 NW 27th Ave, Miami, FL 33147", lat: 25.8470, lng: -80.2316, units: 4, zoning: "T3-R Residential" },
+  { id: 5, address: "8888 SW 136th St, Miami, FL 33176", lat: 25.6430, lng: -80.3350, units: 1, zoning: "EU-1 Single Family" },
 ];
-
-// ---------------------------------------------------------------------------
-// Main
-// ---------------------------------------------------------------------------
 
 function main() {
   console.log("=== TIPOZMAPS — Phase 2: Property Overlay Engine ===\n");
 
-  // Load zones
+  // Determine input source: --input flag or mock data
+  const inputFlag = process.argv.find((a) => a.startsWith("--input="));
+  let properties;
+  if (inputFlag) {
+    const inputPath = path.resolve(inputFlag.split("=")[1]);
+    properties = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
+    console.log(`Loaded ${properties.length} properties from ${inputPath}\n`);
+  } else {
+    properties = MOCK_PROPERTIES;
+    console.log(`Using ${properties.length} built-in mock properties.\n`);
+  }
+
   const zones = loadZones();
-  console.log(
-    `Loaded ${zones.cra.features.length} CRA zones, ${zones.oz.features.length} Opportunity Zones.\n`
-  );
+  console.log(`Loaded ${zones.cra.features.length} CRA zones, ${zones.oz.features.length} Opportunity Zones.\n`);
 
-  // Run matcher
-  const results = matchProperties(MOCK_PROPERTIES, zones);
+  const results = matchProperties(properties, zones);
 
-  // Print results
   const matched = [];
   for (const r of results) {
     const flags = [];
@@ -169,7 +134,6 @@ function main() {
     if (flags.length > 0) matched.push(r);
   }
 
-  // Save matched properties
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
@@ -181,4 +145,10 @@ function main() {
   console.log(`Saved to ${outPath}`);
 }
 
-main();
+// Run standalone if executed directly
+if (require.main === module) {
+  main();
+}
+
+// Export core functions for the master pipeline
+module.exports = { loadZones, matchProperty, matchProperties };

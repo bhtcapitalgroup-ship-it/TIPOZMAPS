@@ -1,77 +1,27 @@
 [
   {
-    "id": 1,
-    "address": "150 NW 20th St, Miami, FL 33127",
-    "lat": 25.788,
-    "lng": -80.1955,
-    "units": 12,
-    "zoning": "T6-8 Urban Core",
-    "notes": "Inside Omni CRA + likely OZ (Overtown area)",
-    "zones": {
-      "cra": {
-        "name": "Omni",
-        "acres": 477.18
-      },
-      "opportunityZone": null
-    },
-    "insideCRA": true,
-    "insideOZ": false
-  },
-  {
     "id": 2,
-    "address": "401 NW 1st Pl, Miami, FL 33128",
-    "lat": 25.7763,
-    "lng": -80.2004,
-    "units": 48,
-    "zoning": "T6-24a Urban Core",
-    "notes": "Downtown / Overtown area — OZ tract 36.01",
+    "folio": "3030350080020",
+    "address": "7205 NW 19 ST",
+    "lat": 25.7916,
+    "lng": -80.315437,
+    "owner": "SPUS7 MIAMI ACC LAND LP",
+    "dorCode": "1713",
+    "dorDescription": "OFFICE BUILDING - ONE STORY : OFFICE BUILDING",
+    "buildingSqFt": 139028,
+    "buildingHeatedSqFt": 137477,
+    "yearBuilt": 1981,
+    "ownerMailingState": "FL",
+    "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+    "fetchedAt": "2026-03-18T14:50:55.956Z",
     "zones": {
       "cra": null,
       "opportunityZone": {
-        "geoid": "12086003601",
-        "tract": "36.01"
+        "geoid": "12086009100",
+        "tract": "91"
       }
     },
     "insideCRA": false,
     "insideOZ": true
-  },
-  {
-    "id": 3,
-    "address": "12550 NE 7th Ave, North Miami, FL 33161",
-    "lat": 25.8967,
-    "lng": -80.1714,
-    "units": 8,
-    "zoning": "RD-15 Residential",
-    "notes": "North Miami CRA centroid",
-    "zones": {
-      "cra": {
-        "name": "North Miami",
-        "acres": 3267.65
-      },
-      "opportunityZone": {
-        "geoid": "12086000220",
-        "tract": "2.20"
-      }
-    },
-    "insideCRA": true,
-    "insideOZ": true
-  },
-  {
-    "id": 4,
-    "address": "7900 NW 27th Ave, Miami, FL 33147",
-    "lat": 25.847,
-    "lng": -80.2316,
-    "units": 4,
-    "zoning": "T3-R Residential",
-    "notes": "NW 79th Street CRA centroid area",
-    "zones": {
-      "cra": {
-        "name": " NW 79th Street",
-        "acres": 1485.1200000000001
-      },
-      "opportunityZone": null
-    },
-    "insideCRA": true,
-    "insideOZ": false
   }
 ]

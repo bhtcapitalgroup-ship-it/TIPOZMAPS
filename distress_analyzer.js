@@ -12,6 +12,8 @@
  *   Out-of-State Owner    = +1 pt
  *
  * Properties scoring >= 3 are flagged "Highly Motivated Seller".
+ *
+ * Can be run standalone or imported by the master pipeline.
  */
 
 const fs = require("fs");
@@ -58,25 +60,41 @@ function scoreProperty(property) {
   };
 }
 
+/**
+ * Ensure a property has publicRecords and physicalAttributes.
+ * If it already has them (e.g. from the bulk feeder via master pipeline),
+ * skip the county API call entirely.
+ */
+function needsEnrichment(property) {
+  return !property.publicRecords || !property.physicalAttributes;
+}
+
 // ---------------------------------------------------------------------------
-// Main
+// Standalone CLI
 // ---------------------------------------------------------------------------
 
 async function main() {
   console.log("=== TIPOZMAPS — Phase 3: Distress Scoring Engine ===\n");
 
-  // 1. Read matched properties
   const matched = JSON.parse(fs.readFileSync(INPUT_PATH, "utf-8"));
   console.log(`Loaded ${matched.length} zone-matched properties from Phase 2.\n`);
 
-  // 2. Enrich with real county data
-  console.log("Querying Miami-Dade County ArcGIS parcel API...\n");
-  const enriched = await enrichAll(matched);
+  // Only call county API for properties that haven't been pre-enriched
+  const toEnrich = matched.filter(needsEnrichment);
+  const preEnriched = matched.filter((p) => !needsEnrichment(p));
 
-  // 3. Score each property
+  let enriched;
+  if (toEnrich.length > 0) {
+    console.log(`Querying Miami-Dade County ArcGIS for ${toEnrich.length} properties...\n`);
+    const freshlyEnriched = await enrichAll(toEnrich);
+    enriched = [...preEnriched, ...freshlyEnriched];
+  } else {
+    console.log("All properties already enriched — skipping county API.\n");
+    enriched = preEnriched;
+  }
+
   const scored = enriched.map(scoreProperty);
 
-  // 4. Print scorecard
   console.log("\n--- SCORECARD ---\n");
   for (const p of scored) {
     const zoneFlags = [];
@@ -100,9 +118,7 @@ async function main() {
     console.log();
   }
 
-  // 5. Filter and save target acquisitions
   const targets = scored.filter((p) => p.sellerTier === "Highly Motivated Seller");
-
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(targets, null, 2), "utf-8");
 
   console.log("--- SUMMARY ---\n");
@@ -112,7 +128,11 @@ async function main() {
   console.log(`\nTarget acquisitions saved to ${OUTPUT_PATH}`);
 }
 
-main().catch((err) => {
-  console.error("Fatal error:", err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error("Fatal error:", err);
+    process.exit(1);
+  });
+}
+
+module.exports = { scoreProperty, MOTIVATED_THRESHOLD };
