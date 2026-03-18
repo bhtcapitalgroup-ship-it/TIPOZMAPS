@@ -1,17 +1,20 @@
 #!/usr/bin/env node
 /**
- * run_master_pipeline.js — Master Pipeline Controller
+ * run_master_pipeline.js — Master Pipeline Controller (Optimized)
  *
- * Orchestrates all phases end-to-end in a single run:
+ * Optimized filter order to minimize expensive operations:
  *
- *   Phase 1:   Fetch office prospects from Miami-Dade County GIS
- *              (or read existing raw_office_prospects.json)
- *   Phase 2:   Point-in-polygon zone matching (CRA/TIF + Opportunity Zones)
- *   Phase 2.5: Tax Collector scraper (Playwright stealth) for delinquency data
- *   Phase 3:   Distress scoring (tax delinquent, out-of-state owner, violations)
- *   Phase 4:   Office-to-residential conversion feasibility filter
+ *   Step A: Load raw prospects (4,656 properties)
+ *   Step B: Conversion feasibility filter — drop anything too small or
+ *           ineligible type (cheap, in-memory)
+ *   Step C: Zone matcher — keep ONLY properties inside a CRA/TIF or
+ *           Opportunity Zone (cheap, in-memory Turf.js)
+ *   Step D: Tax Collector scraper — Playwright stealth on the small
+ *           surviving set (expensive, rate-limited)
+ *   Step E: Distress scoring — final score with tax + out-of-state
  *
- * All data flows in-memory — no redundant API calls between phases.
+ * This order ensures we never hit the Tax Collector site with more
+ * than ~100-200 properties, preventing IP bans and rate limiting.
  */
 
 const fs = require("fs");
@@ -26,20 +29,20 @@ const { checkTaxDelinquencyBatch } = require("./tax_collector_scraper");
 
 const OUTPUT_DIR = path.join(__dirname, "output");
 const RAW_PROSPECTS_PATH = path.join(OUTPUT_DIR, "raw_massive_prospects.json");
-const ULTIMATE_OUTPUT_PATH = path.join(OUTPUT_DIR, "ultimate_unicorns.json");
+const FINAL_OUTPUT_PATH = path.join(OUTPUT_DIR, "massive_unicorns.json");
 
 // ---------------------------------------------------------------------------
-// Phase 1: Acquire raw office prospects
+// Step A: Load raw prospects
 // ---------------------------------------------------------------------------
 
-async function runPhase1() {
+async function stepA_LoadProspects() {
   if (fs.existsSync(RAW_PROSPECTS_PATH)) {
     const prospects = JSON.parse(fs.readFileSync(RAW_PROSPECTS_PATH, "utf-8"));
-    console.log(`   Loaded ${prospects.length} cached prospects from ${RAW_PROSPECTS_PATH}`);
+    console.log(`   Loaded ${prospects.length} properties from cache.`);
     return prospects;
   }
 
-  console.log("   No cached data found. Fetching from county GIS...");
+  console.log("   No cached data. Fetching from county GIS...");
   const { fetchOfficeProspects, transformFeature } = require("./office_prospect_feeder");
   const features = await fetchOfficeProspects();
   const prospects = features.map(transformFeature);
@@ -50,52 +53,93 @@ async function runPhase1() {
 }
 
 // ---------------------------------------------------------------------------
-// Phase 2: Zone matching
+// Step B: Conversion feasibility filter (cheap — in-memory)
 // ---------------------------------------------------------------------------
 
-function runPhase2(prospects) {
-  const zones = loadZones();
-  console.log(`   Loaded ${zones.cra.features.length} CRA zones, ${zones.oz.features.length} Opportunity Zones.`);
+function stepB_ConversionFilter(properties) {
+  // Attach physicalAttributes so evaluateConversion can read them
+  const prepped = properties.map((p) => {
+    const dorCode = p.dorCode || "";
+    const propertyUse = classifyDorCode(dorCode);
+    return {
+      ...p,
+      physicalAttributes: {
+        propertyUse,
+        propertyUseRaw: `${dorCode} - ${p.dorDescription || ""}`,
+        buildingSqFt: p.buildingSqFt || 0,
+      },
+    };
+  });
 
-  const matched = matchProperties(prospects, zones);
-  const inZone = matched.filter((p) => p.insideCRA || p.insideOZ);
+  const evaluated = prepped.map(evaluateConversion);
+  const feasible = evaluated.filter((p) => p.conversionAnalysis.feasible);
 
-  console.log(`   ${inZone.length}/${matched.length} properties fall inside at least one zone.`);
-  return matched;
+  // Log breakdown
+  const ineligibleType = evaluated.filter((p) => {
+    const ca = p.conversionAnalysis;
+    return !ca.feasible && ca.reasons.some((r) => r.includes("not eligible"));
+  }).length;
+  const tooSmall = evaluated.filter((p) => {
+    const ca = p.conversionAnalysis;
+    return !ca.feasible && ca.reasons.some((r) => r.includes("sq ft <"));
+  }).length;
+
+  console.log(`   ${feasible.length} survived (eligible type + >= ${MIN_SQFT.toLocaleString()} sq ft)`);
+  console.log(`   Dropped: ${ineligibleType} ineligible type, ${tooSmall} too small`);
+
+  return feasible;
 }
 
 // ---------------------------------------------------------------------------
-// Phase 2.5: Tax Collector scraper
+// Step C: Zone matcher — ONLY keep properties inside incentive zones
 // ---------------------------------------------------------------------------
 
-async function runPhase2_5(properties) {
-  console.log(`   Launching Playwright stealth browser...`);
+function stepC_ZoneFilter(properties) {
+  const zones = loadZones();
+  console.log(`   Testing against ${zones.cra.features.length} CRA zones + ${zones.oz.features.length} Opportunity Zones...`);
+
+  const matched = matchProperties(properties, zones);
+  const inZone = matched.filter((p) => p.insideCRA || p.insideOZ);
+
+  const craOnly = inZone.filter((p) => p.insideCRA && !p.insideOZ).length;
+  const ozOnly = inZone.filter((p) => !p.insideCRA && p.insideOZ).length;
+  const both = inZone.filter((p) => p.insideCRA && p.insideOZ).length;
+
+  console.log(`   ${inZone.length} inside at least one incentive zone`);
+  console.log(`   Breakdown: ${craOnly} CRA only, ${ozOnly} OZ only, ${both} both CRA+OZ`);
+  console.log(`   Dropped: ${matched.length - inZone.length} outside all zones`);
+
+  return inZone;
+}
+
+// ---------------------------------------------------------------------------
+// Step D: Tax Collector scraper (expensive — Playwright)
+// ---------------------------------------------------------------------------
+
+async function stepD_TaxScraper(properties) {
+  console.log(`   Launching Playwright stealth on ${properties.length} elite prospects...`);
   const enriched = await checkTaxDelinquencyBatch(properties);
 
   const delinquent = enriched.filter((p) => p.taxStatus && p.taxStatus.taxDelinquent);
   const scraped = enriched.filter((p) => p.taxStatus && p.taxStatus.source === "scraped");
   const fallback = enriched.filter((p) => p.taxStatus && p.taxStatus.source === "simulated-fallback");
 
-  console.log(`   ${delinquent.length}/${enriched.length} flagged as tax delinquent.`);
-  if (scraped.length > 0) console.log(`   ${scraped.length} from live scrape.`);
-  if (fallback.length > 0) console.log(`   ${fallback.length} from simulated fallback (site blocked or DOM changed).`);
+  console.log(`   ${delinquent.length}/${enriched.length} flagged as tax delinquent`);
+  if (scraped.length > 0) console.log(`   ${scraped.length} from live scrape`);
+  if (fallback.length > 0) console.log(`   ${fallback.length} from simulated fallback`);
 
   return enriched;
 }
 
 // ---------------------------------------------------------------------------
-// Phase 3: Distress scoring
+// Step E: Distress scoring
 // ---------------------------------------------------------------------------
 
-function runPhase3(properties) {
+function stepE_DistressScore(properties) {
   const enriched = properties.map((p) => {
     const ownerMailingState = (p.ownerMailingState || "").trim().toUpperCase();
     const outOfStateOwner = ownerMailingState !== "" && ownerMailingState !== "FL";
 
-    const dorCode = p.dorCode || "";
-    const propertyUse = classifyDorCode(dorCode);
-
-    // Merge tax data from Phase 2.5 with owner/property data
     const existingRecords = p.publicRecords || {};
 
     return {
@@ -106,31 +150,15 @@ function runPhase3(properties) {
         codeViolations: existingRecords.codeViolations || 0,
         outOfStateOwner,
       },
-      physicalAttributes: {
-        propertyUse,
-        propertyUseRaw: `${dorCode} - ${p.dorDescription || ""}`,
-        buildingSqFt: p.buildingSqFt || 0,
-      },
     };
   });
 
   const scored = enriched.map(scoreProperty);
   const motivated = scored.filter((p) => p.sellerTier === "Highly Motivated Seller");
 
-  console.log(`   ${motivated.length}/${scored.length} scored as Highly Motivated (threshold: ${MOTIVATED_THRESHOLD}+).`);
+  console.log(`   ${motivated.length}/${scored.length} scored as Highly Motivated (threshold: ${MOTIVATED_THRESHOLD}+)`);
+
   return { all: scored, motivated };
-}
-
-// ---------------------------------------------------------------------------
-// Phase 4: Conversion feasibility
-// ---------------------------------------------------------------------------
-
-function runPhase4(properties) {
-  const evaluated = properties.map(evaluateConversion);
-  const unicorns = evaluated.filter((p) => p.conversionAnalysis.feasible);
-
-  console.log(`   ${unicorns.length}/${evaluated.length} pass conversion feasibility (Office + >= ${MIN_SQFT.toLocaleString()} sq ft).`);
-  return { all: evaluated, unicorns };
 }
 
 // ---------------------------------------------------------------------------
@@ -139,11 +167,11 @@ function runPhase4(properties) {
 
 function printSummaryTable(allScored, unicorns) {
   console.log("\n============================================================");
-  console.log("                    PIPELINE RESULTS");
+  console.log("              MASSIVE PIPELINE — FINAL RESULTS");
   console.log("============================================================\n");
 
   if (allScored.length === 0) {
-    console.log("No properties to display.\n");
+    console.log("No properties survived all filters.\n");
     return;
   }
 
@@ -151,11 +179,9 @@ function printSummaryTable(allScored, unicorns) {
     const zoneFlags = [];
     if (p.insideCRA) zoneFlags.push(`CRA: ${p.zones.cra.name.trim()}`);
     if (p.insideOZ) zoneFlags.push(`OZ: ${p.zones.opportunityZone.tract}`);
-    const zoneStr = zoneFlags.length > 0 ? zoneFlags.join(" + ") : "None";
+    const zoneStr = zoneFlags.join(" + ");
 
     const ca = p.conversionAnalysis;
-    const convStatus = ca ? (ca.feasible ? "UNICORN" : "FAIL") : "N/A";
-
     const taxStr = p.taxStatus
       ? (p.taxStatus.taxDelinquent
         ? `DELINQUENT $${p.taxStatus.taxDue.toLocaleString()} (${p.taxStatus.source})`
@@ -163,23 +189,17 @@ function printSummaryTable(allScored, unicorns) {
       : "N/A";
 
     console.log(`[${p.id}] ${p.address || "N/A"}`);
-    console.log(`     Owner:     ${p.owner || "N/A"}  |  State: ${p.ownerMailingState || "N/A"}`);
-    console.log(`     Building:  ${(p.buildingSqFt || 0).toLocaleString()} sq ft  |  DOR: ${p.dorCode || "N/A"} (${p.dorDescription || "N/A"})`);
-    console.log(`     Zones:     ${zoneStr}`);
-    console.log(`     Tax:       ${taxStr}`);
-    console.log(`     Distress:  ${p.distressScore}/6  [${p.sellerTier}]  ${p.distressSignals.length ? "=> " + p.distressSignals.join(", ") : ""}`);
-    if (ca) {
-      console.log(`     Conversion: [${convStatus}] ${ca.reasons.join("; ")}`);
-      if (ca.feasible) {
-        console.log(`     Potential:  ~${ca.potentialUnits} units (target: ${TARGET_UNITS})`);
-      }
-    }
+    console.log(`     Owner:      ${p.owner || "N/A"}  |  State: ${p.ownerMailingState || "N/A"}`);
+    console.log(`     Building:   ${(p.buildingSqFt || 0).toLocaleString()} sq ft  |  ${ca.propertyUse} (Tier ${ca.conversionTier})  |  ~${ca.potentialUnits} units`);
+    console.log(`     Zones:      ${zoneStr}`);
+    console.log(`     Tax:        ${taxStr}`);
+    console.log(`     Distress:   ${p.distressScore}/6  [${p.sellerTier}]  ${p.distressSignals.length ? "=> " + p.distressSignals.join(", ") : ""}`);
     console.log();
   }
 
   console.log("============================================================");
   if (unicorns.length > 0) {
-    console.log(`  ULTIMATE UNICORNS: ${unicorns.length} properties survived all phases`);
+    console.log(`  MASSIVE UNICORNS: ${unicorns.length} properties survived all filters`);
     console.log("============================================================\n");
     for (const u of unicorns) {
       const ca = u.conversionAnalysis;
@@ -187,21 +207,17 @@ function printSummaryTable(allScored, unicorns) {
         ? `TAX DELINQUENT $${u.taxStatus.taxDue.toLocaleString()}`
         : "Tax current";
       console.log(`  >> ${u.address} (Folio: ${u.folio || "N/A"})`);
-      console.log(`     ${(u.buildingSqFt || 0).toLocaleString()} sq ft Office  |  ~${ca.potentialUnits} potential units`);
+      console.log(`     ${(u.buildingSqFt || 0).toLocaleString()} sq ft ${ca.propertyUse} (Tier ${ca.conversionTier})  |  ~${ca.potentialUnits} potential units`);
       console.log(`     Owner: ${u.owner || "N/A"} (${u.ownerMailingState || "N/A"})  |  Distress: ${u.distressScore}/6  |  ${taxLabel}`);
       const zf = [];
       if (u.insideCRA) zf.push(`CRA: ${u.zones.cra.name.trim()}`);
       if (u.insideOZ) zf.push(`OZ: ${u.zones.opportunityZone.tract}`);
-      if (zf.length) console.log(`     Incentive Zones: ${zf.join(" + ")}`);
+      console.log(`     Incentive Zones: ${zf.join(" + ")}`);
       console.log();
     }
   } else {
-    console.log("  NO ULTIMATE UNICORNS — no properties survived all filters.");
+    console.log("  NO UNICORNS survived all filters.");
     console.log("============================================================\n");
-    console.log("  Consider:");
-    console.log("  - Lowering the sq ft threshold");
-    console.log("  - Expanding DOR codes beyond 17xx");
-    console.log("  - Running against a wider geographic area\n");
   }
 }
 
@@ -213,56 +229,56 @@ async function main() {
   const startTime = Date.now();
 
   console.log("================================================================");
-  console.log("  TIPOZMAPS — Master Pipeline: End-to-End Acquisition Finder");
+  console.log("  TIPOZMAPS — Optimized Master Pipeline");
+  console.log("  Filter order: Load -> Conversion -> Zones -> Tax -> Score");
   console.log("================================================================\n");
 
-  // Phase 1: Acquire
-  console.log("[PHASE 1] Bulk Feeder — Large Office Complexes");
-  const prospects = await runPhase1();
+  // Step A: Load
+  console.log("[STEP A] Load Raw Prospects");
+  const raw = await stepA_LoadProspects();
+  console.log(`\n   >>> ${raw.length} properties entering pipeline\n`);
+
+  // Step B: Conversion filter (cheap)
+  console.log("[STEP B] Conversion Feasibility Filter (in-memory)");
+  const convertible = stepB_ConversionFilter(raw);
+  console.log(`\n   >>> Survived Conversion Filter: ${convertible.length} of ${raw.length} (${(convertible.length / raw.length * 100).toFixed(1)}%)\n`);
+
+  // Step C: Zone match (cheap)
+  console.log("[STEP C] Incentive Zone Filter — CRA/TIF + Opportunity Zones (in-memory)");
+  const inZone = stepC_ZoneFilter(convertible);
+  console.log(`\n   >>> Survived Zone Match: ${inZone.length} of ${convertible.length} (${(inZone.length / convertible.length * 100).toFixed(1)}%)\n`);
+
+  // Step D: Tax scraper (expensive — only runs on surviving set)
+  console.log("[STEP D] Tax Collector Scraper (Playwright Stealth)");
+  console.log(`   Only ${inZone.length} properties to scrape (saved ${raw.length - inZone.length} unnecessary requests)`);
+  const taxChecked = await stepD_TaxScraper(inZone);
   console.log();
 
-  // Phase 2: Zone match
-  console.log("[PHASE 2] Zone Matcher — CRA/TIF + Opportunity Zones");
-  const zoneMatched = runPhase2(prospects);
+  // Step E: Distress scoring
+  console.log("[STEP E] Distress Scoring Engine");
+  const { all: allScored, motivated } = stepE_DistressScore(taxChecked);
   console.log();
 
-  // Phase 2.5: Tax delinquency check
-  console.log("[PHASE 2.5] Tax Collector Scraper (Playwright Stealth)");
-  const taxChecked = await runPhase2_5(zoneMatched);
-  console.log();
-
-  // Phase 3: Distress score (now includes tax delinquency from Phase 2.5)
-  console.log("[PHASE 3] Distress Scoring Engine");
-  const { all: allScored, motivated } = runPhase3(taxChecked);
-  console.log();
-
-  // Phase 4: Conversion filter
-  console.log("[PHASE 4] Office-to-Resi Conversion Filter");
-  const phase4Input = motivated.length > 0 ? motivated : allScored;
-  const inputLabel = motivated.length > 0 ? "motivated sellers" : "all scored (no motivated sellers found)";
-  console.log(`   Evaluating ${phase4Input.length} ${inputLabel}...`);
-  const { all: allEvaluated, unicorns } = runPhase4(phase4Input);
-  console.log();
-
-  // Save ultimate unicorns
+  // Save final output
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
-  fs.writeFileSync(ULTIMATE_OUTPUT_PATH, JSON.stringify(unicorns, null, 2), "utf-8");
+  fs.writeFileSync(FINAL_OUTPUT_PATH, JSON.stringify(allScored, null, 2), "utf-8");
 
-  // Print the full summary
-  printSummaryTable(allEvaluated, unicorns);
+  // Print full results
+  printSummaryTable(allScored, motivated);
 
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
 
-  console.log("--- PIPELINE STATS ---\n");
-  console.log(`  Phase 1   — Raw prospects:     ${prospects.length}`);
-  console.log(`  Phase 2   — Zone matched:      ${zoneMatched.filter((p) => p.insideCRA || p.insideOZ).length}/${zoneMatched.length}`);
-  console.log(`  Phase 2.5 — Tax delinquent:    ${taxChecked.filter((p) => p.taxStatus && p.taxStatus.taxDelinquent).length}/${taxChecked.length}`);
-  console.log(`  Phase 3   — Highly Motivated:  ${motivated.length}/${allScored.length}`);
-  console.log(`  Phase 4   — Unicorns:          ${unicorns.length}/${allEvaluated.length}`);
-  console.log(`  Elapsed:                       ${elapsed}s`);
-  console.log(`\n  Final output: ${ULTIMATE_OUTPUT_PATH}`);
+  console.log("--- PIPELINE FUNNEL ---\n");
+  console.log(`  Step A — Raw prospects loaded:    ${raw.length}`);
+  console.log(`  Step B — Survived conversion:     ${convertible.length}`);
+  console.log(`  Step C — Survived zone match:     ${inZone.length}`);
+  console.log(`  Step D — Tax checked:             ${taxChecked.length} (${taxChecked.filter((p) => p.taxStatus && p.taxStatus.taxDelinquent).length} delinquent)`);
+  console.log(`  Step E — Highly Motivated:        ${motivated.length}`);
+  console.log(`  Elapsed:                          ${elapsed}s`);
+  console.log(`  Scraper efficiency:               ${inZone.length} requests vs ${raw.length} without optimization (${((1 - inZone.length / raw.length) * 100).toFixed(1)}% reduction)`);
+  console.log(`\n  Final output: ${FINAL_OUTPUT_PATH}`);
 }
 
 main().catch((err) => {
