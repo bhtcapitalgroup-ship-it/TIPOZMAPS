@@ -1,0 +1,114 @@
+{
+  "property": {
+    "id": 332,
+    "address": "2900 NE 2 AVE",
+    "folio": "0131250930030",
+    "owner": "PPF AMLI NE 2ND AVENUE LLC",
+    "ownerState": "IL",
+    "distressScore": 4,
+    "dorDescription": "MULTIFAMILY 10 UNITS PLUS : MULTIFAMILY 3 OR MORE UNITS",
+    "zones": {
+      "cra": null,
+      "oz": "27.02"
+    }
+  },
+  "physical": {
+    "totalSqFt": 1939983,
+    "usableSqFt": 1454987,
+    "amenitySqFt": 484996,
+    "totalUnits": 2909,
+    "avgUnitSqFt": 500,
+    "efficiencyRatio": 0.75,
+    "unitMix": {
+      "studio": {
+        "count": 581,
+        "sqft": 400,
+        "rent": 1760
+      },
+      "oneBed": {
+        "count": 1309,
+        "sqft": 500,
+        "rent": 2200
+      },
+      "twoBed": {
+        "count": 727,
+        "sqft": 700,
+        "rent": 3080
+      },
+      "threeBed": {
+        "count": 292,
+        "sqft": 950,
+        "rent": 3960
+      }
+    }
+  },
+  "acquisition": {
+    "existingDebt": 193998300,
+    "closingCosts": 3879966,
+    "debtPerSqFt": 100
+  },
+  "conversion": {
+    "hardCosts": 254622725,
+    "softCosts": 30554727,
+    "contingency": 20369818,
+    "totalConversionCost": 305547270,
+    "costPerUsableSqFt": 175,
+    "timelineMonths": 18
+  },
+  "capitalStack": {
+    "totalProjectCost": 503425536,
+    "existingDebt": 193998300,
+    "equityRequired": 309427236,
+    "costPerUnit": 173058,
+    "costPerSqFt": 259,
+    "leverageRatio": 0.38535649490771956
+  },
+  "revenue": {
+    "grossPotentialRent": 76797600,
+    "vacancyLoss": 3839880,
+    "effectiveGrossIncome": 72957720,
+    "ancillaryIncome": 2618100,
+    "totalRevenue": 75575820,
+    "rentPerUnit": 2200
+  },
+  "expenses": {
+    "operatingExpenses": 26879160,
+    "opExRatio": 0.35
+  },
+  "returns": {
+    "stabilizedNOI": 48696660,
+    "annualDebtService": 13218012,
+    "cashFlowAfterDebt": 35478648,
+    "yieldOnCost": 0.09673061161522009,
+    "cashOnCashReturn": 0.11465909872264768,
+    "exitCapRate": 0.055,
+    "exitValuation": 885393818,
+    "createdEquity": 381968282,
+    "equityMultiple": 2.2344365251674225
+  },
+  "projection": {
+    "holdPeriodYears": 5,
+    "annualRentGrowth": 0.03,
+    "year5NOI": 54808520,
+    "year5Valuation": 996518545,
+    "year5Equity": 802520245
+  },
+  "assumptions": {
+    "efficiencyRatio": 0.75,
+    "avgUnitSqFt": 500,
+    "conversionCostPerSqFt": 175,
+    "stabilizedRentPerUnit": 2200,
+    "annualRentGrowth": 0.03,
+    "opExRatio": 0.35,
+    "vacancyRate": 0.05,
+    "managementFee": 0.04,
+    "existingDebtPerSqFt": 100,
+    "interestRate": 0.055,
+    "loanTermYears": 30,
+    "exitCapRate": 0.055,
+    "holdPeriodYears": 5,
+    "closingCostsPct": 0.02,
+    "conversionTimeline": 18
+  },
+  "generatedAt": "2026-03-18T18:33:39.080Z"
+}
