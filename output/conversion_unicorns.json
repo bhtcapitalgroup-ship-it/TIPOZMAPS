@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "address": "150 NW 20th St, Miami, FL 33127",
+    "lat": 25.788,
+    "lng": -80.1955,
+    "units": 12,
+    "zoning": "T6-8 Urban Core",
+    "notes": "Inside Omni CRA + likely OZ (Overtown area)",
+    "zones": {
+      "cra": {
+        "name": "Omni",
+        "acres": 477.18
+      },
+      "opportunityZone": null
+    },
+    "insideCRA": true,
+    "insideOZ": false,
+    "publicRecords": {
+      "taxDelinquent": true,
+      "codeViolations": 12634,
+      "outOfStateOwner": true
+    },
+    "distressScore": 6,
+    "distressSignals": [
+      "Tax Delinquent (+3)",
+      "Code Violations: $12,634 (+2)",
+      "Out-of-State Owner (+1)"
+    ],
+    "sellerTier": "Highly Motivated Seller",
+    "physicalAttributes": {
+      "propertyUse": "Office",
+      "buildingSqFt": 135000
+    },
+    "conversionAnalysis": {
+      "feasible": true,
+      "propertyUse": "Office",
+      "buildingSqFt": 135000,
+      "minRequired": 120000,
+      "potentialUnits": 216,
+      "targetUnits": 200,
+      "reasons": [
+        "135,000 sq ft Office — fits ~216 units at 80% efficiency"
+      ]
+    }
+  }
+]
