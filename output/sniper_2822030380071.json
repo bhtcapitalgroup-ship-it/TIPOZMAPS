@@ -22,12 +22,6 @@
   },
   "insideCRA": false,
   "insideOZ": true,
-  "taxStatus": {
-    "taxDelinquent": false,
-    "taxDue": 0,
-    "source": "error",
-    "error": "SCRAPE FAILED for folio 2822030380071: Both Playwright proxy and REST API failed to extract tax data. The site may have changed its DOM structure or is blocking even proxied requests."
-  },
   "publicRecords": {
     "taxDelinquent": false,
     "taxDue": 0,
@@ -57,5 +51,11 @@
     "reasons": [
       "864,130 sq ft Retail/Department Store (Tier B, 75% eff.) — fits ~1296 units"
     ]
-  }
+  },
+  "verificationLinks": {
+    "taxCollector": "https://miamidade.county-taxes.com/public/real_estate/parcels/2822030380071",
+    "propertyAppraiser": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=2822030380071",
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=25.954565,-80.140522"
+  },
+  "generatedAt": "2026-03-19T02:15:10.848Z"
 }

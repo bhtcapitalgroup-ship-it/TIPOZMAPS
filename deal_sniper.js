@@ -2,9 +2,9 @@
 /**
  * deal_sniper.js — Single-Property Deal Sniper
  *
- * Look up any property by address, pull its zone data and real tax
- * delinquency status via ScraperAPI, score it, and evaluate conversion
- * feasibility — all in one shot.
+ * Look up any property by address, pull its zone data, score it,
+ * evaluate conversion feasibility, and generate direct verification
+ * links to the county Tax Collector and Property Appraiser portals.
  *
  * Usage: node deal_sniper.js "19501 BISCAYNE BLVD"
  */
@@ -13,12 +13,17 @@ const fs = require("fs");
 const path = require("path");
 const { loadZones, matchProperty } = require("./property_matcher");
 const { classifyDorCode } = require("./miami_public_data");
-const { checkTaxDelinquency, closeBrowser } = require("./tax_collector_scraper");
 const { scoreProperty } = require("./distress_analyzer");
 const { evaluateConversion } = require("./conversion_evaluator");
 
 const PROSPECTS_PATH = path.join(__dirname, "output", "raw_massive_prospects.json");
 const OUTPUT_DIR = path.join(__dirname, "output");
+
+// Direct portal URLs using Folio number
+const TAX_COLLECTOR_URL = (folio) =>
+  `https://miamidade.county-taxes.com/public/real_estate/parcels/${folio}`;
+const PROPERTY_APPRAISER_URL = (folio) =>
+  `https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=${folio}`;
 
 // ---------------------------------------------------------------------------
 // Find property by address in the prospects dataset
@@ -48,7 +53,7 @@ function findByAddress(address, prospects) {
 // Main
 // ---------------------------------------------------------------------------
 
-async function main() {
+function main() {
   const searchAddress = process.argv[2];
 
   if (!searchAddress) {
@@ -72,10 +77,11 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`[FOUND] ${property.address} (Folio: ${property.folio})\n`);
+  const folio = property.folio;
+  console.log(`[FOUND] ${property.address} (Folio: ${folio})\n`);
 
   // Step 1: Zone match
-  console.log("[1/4] Zone Matching...");
+  console.log("[1/3] Zone Matching...");
   const zones = loadZones();
   const zoneMatched = matchProperty(property, zones);
   const zoneFlags = [];
@@ -83,31 +89,17 @@ async function main() {
   if (zoneMatched.insideOZ) zoneFlags.push(`OZ: Tract ${zoneMatched.zones.opportunityZone.tract}`);
   console.log(`   Zones: ${zoneFlags.length > 0 ? zoneFlags.join(" + ") : "None"}\n`);
 
-  // Step 2: Real tax data via ScraperAPI
-  console.log("[2/4] Tax Delinquency Check (ScraperAPI)...");
-  let taxResult;
-  try {
-    taxResult = await checkTaxDelinquency(zoneMatched);
-  } catch (err) {
-    console.error(`   [ERROR] ${err.message}`);
-    taxResult = { taxDelinquent: false, taxDue: 0, source: "error", error: err.message };
-  } finally {
-    await closeBrowser();
-  }
-  console.log();
-
-  // Step 3: Distress scoring
-  console.log("[3/4] Distress Scoring...");
+  // Step 2: Distress scoring (out-of-state only; tax checked manually via link)
+  console.log("[2/3] Distress Scoring...");
   const ownerMailingState = (zoneMatched.ownerMailingState || "").trim().toUpperCase();
   const outOfStateOwner = ownerMailingState !== "" && ownerMailingState !== "FL";
   const dorCode = zoneMatched.dorCode || "";
 
   const enriched = {
     ...zoneMatched,
-    taxStatus: taxResult,
     publicRecords: {
-      taxDelinquent: taxResult.taxDelinquent,
-      taxDue: taxResult.taxDue,
+      taxDelinquent: false, // verify manually via link below
+      taxDue: 0,
       codeViolations: 0,
       outOfStateOwner,
     },
@@ -121,48 +113,87 @@ async function main() {
   const scored = scoreProperty(enriched);
   console.log(`   Score: ${scored.distressScore}/6  [${scored.sellerTier}]`);
   if (scored.distressSignals.length) console.log(`   Signals: ${scored.distressSignals.join(", ")}`);
-  console.log();
+  console.log(`   (Tax delinquency not included — verify via link below)\n`);
 
-  // Step 4: Conversion feasibility
-  console.log("[4/4] Conversion Feasibility...");
+  // Step 3: Conversion feasibility
+  console.log("[3/3] Conversion Feasibility...");
   const evaluated = evaluateConversion(scored);
   const ca = evaluated.conversionAnalysis;
   console.log(`   ${ca.feasible ? "FEASIBLE" : "NOT FEASIBLE"}: ${ca.reasons.join("; ")}`);
   if (ca.feasible) console.log(`   Potential: ~${ca.potentialUnits} units (Tier ${ca.conversionTier})`);
   console.log();
 
-  // Print full report
-  console.log("================================================================");
-  console.log("  DEAL SNIPER REPORT");
-  console.log("================================================================\n");
-  console.log(`  Address:         ${evaluated.address}`);
-  console.log(`  Folio:           ${evaluated.folio}`);
-  console.log(`  Owner:           ${evaluated.owner} (${evaluated.ownerMailingState})`);
-  console.log(`  Building:        ${(evaluated.buildingSqFt || 0).toLocaleString()} sq ft`);
-  console.log(`  Type:            ${evaluated.dorDescription}`);
-  console.log(`  Year Built:      ${evaluated.yearBuilt || "N/A"}`);
-  console.log(`  Zones:           ${zoneFlags.join(" + ") || "None"}`);
-  console.log();
-  console.log(`  TAX STATUS:      ${taxResult.taxDelinquent ? `DELINQUENT — $${taxResult.taxDue.toLocaleString()} due` : "Current ($0 due)"}`);
-  console.log(`  Tax Source:      ${taxResult.source}`);
-  console.log(`  Out-of-State:    ${outOfStateOwner ? "YES" : "No"}`);
-  console.log(`  DISTRESS SCORE:  ${scored.distressScore}/6  [${scored.sellerTier}]`);
-  console.log();
-  console.log(`  CONVERSION:      ${ca.feasible ? "FEASIBLE" : "NOT FEASIBLE"}`);
-  if (ca.feasible) {
-    console.log(`  Use:             ${ca.propertyUse} (Tier ${ca.conversionTier}, ${Math.round(ca.efficiency * 100)}% eff.)`);
-    console.log(`  Potential Units: ~${ca.potentialUnits}`);
-  }
-  console.log(`  Google Maps:     https://www.google.com/maps/search/?api=1&query=${evaluated.lat},${evaluated.lng}`);
-  console.log("\n================================================================\n");
+  // Generate verification links
+  const taxCollectorLink = TAX_COLLECTOR_URL(folio);
+  const propertyAppraiserLink = PROPERTY_APPRAISER_URL(folio);
+  const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${evaluated.lat},${evaluated.lng}`;
 
-  // Save report
-  const reportPath = path.join(OUTPUT_DIR, `sniper_${evaluated.folio}.json`);
-  fs.writeFileSync(reportPath, JSON.stringify(evaluated, null, 2), "utf-8");
+  // Print Executive Tear Sheet
+  console.log("┌──────────────────────────────────────────────────────────────┐");
+  console.log("│              EXECUTIVE DEAL TEAR SHEET                       │");
+  console.log("│              BHT Capital Group — Deal Sniper                 │");
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log("│  PROPERTY                                                    │");
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log(`│  Address:         ${evaluated.address}`);
+  console.log(`│  Folio:           ${folio}`);
+  console.log(`│  Owner:           ${evaluated.owner} (${evaluated.ownerMailingState})`);
+  console.log(`│  Building:        ${(evaluated.buildingSqFt || 0).toLocaleString()} sq ft`);
+  console.log(`│  Type:            ${evaluated.dorDescription}`);
+  console.log(`│  Year Built:      ${evaluated.yearBuilt || "N/A"}`);
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log("│  ZONE OVERLAY                                                │");
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  if (zoneMatched.insideCRA) {
+    console.log(`│  CRA/TIF Zone:    ${zoneMatched.zones.cra.name.trim()} (${zoneMatched.zones.cra.acres} acres)`);
+  }
+  if (zoneMatched.insideOZ) {
+    console.log(`│  Opportunity Zone: Tract ${zoneMatched.zones.opportunityZone.tract} (GEOID: ${zoneMatched.zones.opportunityZone.geoid})`);
+  }
+  if (!zoneMatched.insideCRA && !zoneMatched.insideOZ) {
+    console.log("│  No incentive zones detected");
+  }
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log("│  DISTRESS INDICATORS                                         │");
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log(`│  Out-of-State Owner:  ${outOfStateOwner ? "YES (" + ownerMailingState + ")" : "No (FL)"}`);
+  console.log(`│  Tax Delinquent:      Verify via link below`);
+  console.log(`│  DISTRESS SCORE:      ${scored.distressScore}/6  [${scored.sellerTier}]`);
+  console.log(`│  (Add +3 if tax delinquent per manual check)`);
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log("│  CONVERSION FEASIBILITY                                      │");
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log(`│  Status:           ${ca.feasible ? "FEASIBLE" : "NOT FEASIBLE"}`);
+  if (ca.feasible) {
+    console.log(`│  Use:              ${ca.propertyUse} (Tier ${ca.conversionTier}, ${Math.round(ca.efficiency * 100)}% efficiency)`);
+    console.log(`│  Potential Units:  ~${ca.potentialUnits} (target: ${ca.targetUnits})`);
+    console.log(`│  Min Sq Ft:        ${ca.minRequired.toLocaleString()} sq ft`);
+  } else {
+    console.log(`│  Reason:           ${ca.reasons.join("; ")}`);
+  }
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log("│  MANUAL VERIFICATION LINKS                                   │");
+  console.log("├──────────────────────────────────────────────────────────────┤");
+  console.log(`│  Tax Collector:    ${taxCollectorLink}`);
+  console.log(`│  Prop. Appraiser:  ${propertyAppraiserLink}`);
+  console.log(`│  Google Maps:      ${googleMapsLink}`);
+  console.log("└──────────────────────────────────────────────────────────────┘");
+  console.log();
+
+  // Save report with links
+  const report = {
+    ...evaluated,
+    verificationLinks: {
+      taxCollector: taxCollectorLink,
+      propertyAppraiser: propertyAppraiserLink,
+      googleMaps: googleMapsLink,
+    },
+    generatedAt: new Date().toISOString(),
+  };
+
+  const reportPath = path.join(OUTPUT_DIR, `sniper_${folio}.json`);
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf-8");
   console.log(`Report saved to ${reportPath}`);
 }
 
-main().catch((err) => {
-  console.error("Fatal error:", err);
-  process.exit(1);
-});
+main();
