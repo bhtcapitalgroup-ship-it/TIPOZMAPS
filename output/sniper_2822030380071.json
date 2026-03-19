@@ -1,0 +1,61 @@
+{
+  "id": 2397,
+  "folio": "2822030380071",
+  "address": "19501 BISCAYNE BLVD",
+  "lat": 25.954565,
+  "lng": -80.140522,
+  "owner": "AVENTURA MALL VENTURE",
+  "dorCode": "1317",
+  "dorDescription": "DEPARTMENT STORE : COMMERCIAL - TOTAL VALUE",
+  "buildingSqFt": 864130,
+  "buildingHeatedSqFt": 864130,
+  "yearBuilt": 1997,
+  "ownerMailingState": "OH",
+  "source": "Miami-Dade County GIS — MD_LandInformation/MapServer/26",
+  "fetchedAt": "2026-03-18T15:39:54.462Z",
+  "zones": {
+    "cra": null,
+    "opportunityZone": {
+      "geoid": "12086000134",
+      "tract": "1.34"
+    }
+  },
+  "insideCRA": false,
+  "insideOZ": true,
+  "taxStatus": {
+    "taxDelinquent": false,
+    "taxDue": 0,
+    "source": "error",
+    "error": "SCRAPE FAILED for folio 2822030380071: Both Playwright proxy and REST API failed to extract tax data. The site may have changed its DOM structure or is blocking even proxied requests."
+  },
+  "publicRecords": {
+    "taxDelinquent": false,
+    "taxDue": 0,
+    "codeViolations": 0,
+    "outOfStateOwner": true
+  },
+  "physicalAttributes": {
+    "propertyUse": "Retail/Department Store",
+    "propertyUseRaw": "1317 - DEPARTMENT STORE : COMMERCIAL - TOTAL VALUE",
+    "buildingSqFt": 864130
+  },
+  "distressScore": 1,
+  "distressSignals": [
+    "Out-of-State Owner (+1)"
+  ],
+  "sellerTier": "Standard",
+  "conversionAnalysis": {
+    "feasible": true,
+    "propertyUse": "Retail/Department Store",
+    "propertyUseRaw": "1317 - DEPARTMENT STORE : COMMERCIAL - TOTAL VALUE",
+    "conversionTier": "B",
+    "efficiency": 0.75,
+    "buildingSqFt": 864130,
+    "minRequired": 120000,
+    "potentialUnits": 1296,
+    "targetUnits": 200,
+    "reasons": [
+      "864,130 sq ft Retail/Department Store (Tier B, 75% eff.) — fits ~1296 units"
+    ]
+  }
+}
